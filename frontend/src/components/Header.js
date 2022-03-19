@@ -1,17 +1,24 @@
 import React from 'react'
 import { Container, Navbar, Nav } from 'react-bootstrap'
+import { LinkContainer } from 'react-router-bootstrap'
 
 const Header = () => {
   return (
     <header>
         <Navbar bg="dark" variant="dark" expand="lg" collapseOnSelect>
             <Container>
-                <Navbar.Brand href="/">The Character List</Navbar.Brand>
+                <LinkContainer to="/">
+                    <Navbar.Brand>The Character List</Navbar.Brand>
+                </LinkContainer>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ms-auto">
-                        <Nav.Link href="/PCs">Player Characters</Nav.Link>
-                        <Nav.Link href="/NPCs">NPCs</Nav.Link>
+                        <LinkContainer to="/pcs">
+                            <Nav.Link>Player Characters</Nav.Link>
+                        </LinkContainer>
+                        <LinkContainer to="/npcs">
+                            <Nav.Link>NPCs</Nav.Link>
+                        </LinkContainer>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

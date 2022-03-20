@@ -3,9 +3,9 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import HomeScreen from './screens/HomeScreen';
-import CharacterScreen from './screens/CharacterScreen'
+import CharacterScreen from './screens/CharacterScreen';
 
-function App() {
+const App = () => {
   return (
     <>
     <Router>

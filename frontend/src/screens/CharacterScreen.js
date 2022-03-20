@@ -21,7 +21,7 @@ const CharacterScreen = () => {
           <Col>
             <ListGroup variant='flush'>
               <ListGroup.Item>
-                <h3>{character.name}</h3>
+                <span><h3>{character.name}</h3> {character.nickname != null && <div> ({character.nickname}) </div>}</span>
               </ListGroup.Item>
               <ListGroup.Item>
                 {character.race} - {character.alignment}
@@ -42,14 +42,21 @@ const CharacterScreen = () => {
       </Card>
 
       <Card>
-          <Col>
+        <Card.Title as='div'>
+          <strong>Character Stats</strong>
+        </Card.Title>
+
+        <Card.Text as='div'>
+        <div className='my-3'>
+          <Col class='text-centered'>
               {/*displays value, (modifier) 
               + modifier if > 0, 
               - modifier if < 0, and 
               -- if modifier == 0*/} 
-            <Row class='text-centered'>
+            <Row>
               <strong>Strength:</strong> 
-              <br></br>
+            </Row>
+            <Row>
               {character.stats.vitals.strength} 
               ({character.stats.vitals.strengthModifier < 0 ? 
                 <div> - {character.stats.vitals.strengthModifier} </div> :
@@ -57,9 +64,10 @@ const CharacterScreen = () => {
                 <div> + {character.stats.vitals.strengthModifier} </div> :
                 <div> -- </div>})
             </Row>
-            <Row class='text-centered'>
+            <Row>
               <strong>Dexterity:</strong> 
-              <br></br>
+            </Row>
+            <Row>
               {character.stats.vitals.dexterity} 
               ({character.stats.vitals.dexModifier < 0 ? 
                 <div> - {character.stats.vitals.dexModifier} </div> : 
@@ -67,19 +75,21 @@ const CharacterScreen = () => {
                 <div> + {character.stats.vitals.dexModifier} </div> :
                 <div> -- </div>})
             </Row>
-            <Row class='text-centered'>
+            <Row >
               <strong>Constitution:</strong>
-              <br></br>
+            </Row>
+            <Row>
               {character.stats.vitals.constitution} 
-              ({character.stats.vitals.constitutionModifier < 0 ? 
-                <div> - {character.stats.vitals.constitutionModifier} </div> :
-                character.stats.vitals.constitutionModifier > 0 ? 
-                <div> + {character.stats.vitals.constitutionModifier} </div> :
+              ({character.stats.vitals.constModifier < 0 ? 
+                <div> - {character.stats.vitals.constModifier} </div> :
+                character.stats.vitals.constModifier > 0 ? 
+                <div> + {character.stats.vitals.constModifier} </div> :
                 <div> -- </div>})
             </Row>
-            <Row class='text-centered'>
+            <Row>
               <strong>Intelligence:</strong>
-              <br></br>
+            </Row>
+            <Row>
               {character.stats.vitals.intelligence} 
               ({character.stats.vitals.intelModifier < 0 ? 
                 <div> - {character.stats.vitals.intelModifier} </div> : 
@@ -87,9 +97,10 @@ const CharacterScreen = () => {
                 <div> + {character.stats.vitals.intelModifier} </div> :
                 <div> -- </div>})
             </Row>
-            <Row class='text-centered'>
+            <Row>
               <strong>Wisdom:</strong>
-              <br></br>
+            </Row>
+            <Row>
               {character.stats.vitals.wisdom} 
               ({character.stats.vitals.wisdomModifier < 0 ? 
                 <div> - {character.stats.vitals.wisdomModifier} </div> : 
@@ -97,9 +108,10 @@ const CharacterScreen = () => {
                 <div> + {character.stats.vitals.wisdomModifier} </div> :
                 <div> -- </div>})
             </Row>
-            <Row class='text-centered'>
+            <Row>
               <strong>Charisma:</strong> 
-              <br></br>
+            </Row>
+            <Row>
               {character.stats.vitals.charisma} 
               ({character.stats.vitals.charismaModifier < 0 ? 
                 <div> - {character.stats.vitals.charismaModifier} </div> : 
@@ -111,7 +123,7 @@ const CharacterScreen = () => {
           <Col>
             <Row>
                 <Col>
-                  <Row><strong>Saving Throws</strong></Row>
+                  <Row><strong>Saving Throws:</strong></Row>
                   <Row>Strength: {character.stats.savingThrows.strengthST}</Row>
                   <Row>Dexterity: {character.stats.savingThrows.dexterityST}</Row>
                   <Row>Constitution: {character.stats.savingThrows.constitutionST}</Row>
@@ -122,7 +134,7 @@ const CharacterScreen = () => {
             </Row>
             <Row>
                 <Col>
-                  <Row><strong>Skills</strong></Row>
+                  <Row><strong>Skills:</strong></Row>
                   <Row>Acrobatics: {character.stats.skills.acrobatics}</Row>
                   <Row>Animal Handling: {character.stats.skills.animalHandling}</Row>
                   <Row>Arcana: {character.stats.skills.arcana}</Row>
@@ -147,13 +159,45 @@ const CharacterScreen = () => {
           <Col>
             <Row>
               <Col>
+                <Row><strong>AC:</strong></Row>
+                <Row>{character.stats.armorClass}</Row>
               </Col>
               <Col>
+                <Row><strong>Initiative:</strong></Row>
+                <Row>{character.stats.initiative}</Row>
               </Col>
               <Col>
+                <Row><strong>Speed:</strong></Row>
+                <Row>{character.stats.speed}</Row>
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <Row><strong>Hit Point Max:</strong></Row>
+                <Row>{character.stats.hitPointMax}</Row>
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <Row><strong>Proficiencies and Languages:</strong></Row>
+                <Row>
+                  <Col>
+                    <Row>{character.stats.proficiencies.weaponsProf.map((p) => " [" + p + "] ")}</Row>
+                    <Row>{character.stats.proficiencies.armorProf.map((p) => " [" + p + "] ")}</Row>
+                    <Row>{character.stats.proficiencies.languageProf.map((p) => " [" + p + "] ")}</Row>
+                  </Col>
+                </Row>
+                <Row><strong>Features and Traits:</strong></Row>
+                <Row>
+                  <Col>
+                    <Row>{character.stats.traits.map((p) => " [" + p + "] ")}</Row>
+                  </Col>
+                </Row>
               </Col>
             </Row>
           </Col>
+        </div>
+        </Card.Text>
       </Card>
     </>
   )

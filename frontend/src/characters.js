@@ -1,7 +1,7 @@
 const characters = [
     {
         id: '_1',
-        image: '/images.mindartis.jpg',
+        image: '/images/mindartis.jpg',
         name: 'Mindartis Liadon',
         nickname: 'Mindy',
         race: 'high elf',

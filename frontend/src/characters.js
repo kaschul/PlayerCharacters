@@ -213,6 +213,222 @@ const characters = [
             traits: ['unending breath', 'mingle with the wind', 'sneak attack'],
             equipment: ['dagger x2', 'shortbow', 'arrows x 20', 'leather armor']
         }
+    },
+
+    {
+        _id: '4',
+        image: '/images/merit.jpg',
+        name: 'Merit',
+        nickname: 'Merry',
+        race: 'tiefling',
+        class: 'warlock',
+        subclass: null,
+        level: 1,
+        alignment: 'neutral good',
+        background: 'wildling',
+        description: 'Orphaned at a young age, Merit grew up in the slums of a small city and turned to petty theft to survive.  However, as they have gotten older and can earn a living through more official channels, they have turned to taking on odd jobs and joining the occasional adventuring party.',
+        stats: {
+            armorClass: 0,
+            initiative: 0,
+            speed: 0,
+            hitPointMax: 0,
+            profBonus: 0,
+            inspiration: false,
+            vitals: {
+                strength: 0,
+                strengthModifier: 0,
+                dexterity: 0,
+                dexModifier: 0,
+                constitution: 0,
+                constModifier: 0,
+                intelligence: 0,
+                intelModifier: 0,
+                wisdom: 0,
+                wisdomModifier: 0,
+                charisma: 0,
+                charismaModifier: 0
+            },
+            savingThrows: {
+                strengthST: 0,
+                dexterityST: 0,
+                constitutionST: 0,
+                intelligenceST: 0,
+                wisdomST: 0,
+                charismaST: 0
+            },
+            skills: {
+                acrobatics: 0,
+                animalHandling: 0,
+                arcana: 0,
+                athletics: 0,
+                deception: 0,
+                history: 0,
+                insight: 0,
+                intimidation: 0,
+                investigation: 0,
+                medicine: 0,
+                nature: 0,
+                perception: 0,
+                performance: 0,
+                persuasion: 0,
+                religion: 0,
+                slightOfHand: 0,
+                stealth: 0,
+                survival: 0
+            },
+            proficiencies: {
+                weaponsProf: [],
+                armorProf: [],
+                toolProf: [],
+                languageProf: []
+            },
+            traits: [],
+            equipment: []
+        }
+    },
+
+    {
+        _id: '5',
+        image: '/images/willow.jpg',
+        name: 'Willow',
+        nickname: null,
+        race: 'wood elf',
+        class: 'druid',
+        subclass: 'circle of the moon',
+        level: 4,
+        alignment: 'chaotic neutral',
+        background: 'outlander',
+        description: 'Raised by a small nomadic tribe of wood elves and with a propensity to wander off as a child, Willow grew up semi-feral and is most at home in the wilds.  She finds civilization to be claustrophobic and disconcerting, however after the last of her small family passed away due to an owlbear attack she has been drawn to the nearby villages in an effort to find new companions.',
+        stats: {
+            armorClass: 0,
+            initiative: 0,
+            speed: 0,
+            hitPointMax: 0,
+            profBonus: 0,
+            inspiration: false,
+            vitals: {
+                strength: 0,
+                strengthModifier: 0,
+                dexterity: 0,
+                dexModifier: 0,
+                constitution: 0,
+                constModifier: 0,
+                intelligence: 0,
+                intelModifier: 0,
+                wisdom: 0,
+                wisdomModifier: 0,
+                charisma: 0,
+                charismaModifier: 0
+            },
+            savingThrows: {
+                strengthST: 0,
+                dexterityST: 0,
+                constitutionST: 0,
+                intelligenceST: 0,
+                wisdomST: 0,
+                charismaST: 0
+            },
+            skills: {
+                acrobatics: 0,
+                animalHandling: 0,
+                arcana: 0,
+                athletics: 0,
+                deception: 0,
+                history: 0,
+                insight: 0,
+                intimidation: 0,
+                investigation: 0,
+                medicine: 0,
+                nature: 0,
+                perception: 0,
+                performance: 0,
+                persuasion: 0,
+                religion: 0,
+                slightOfHand: 0,
+                stealth: 0,
+                survival: 0
+            },
+            proficiencies: {
+                weaponsProf: [],
+                armorProf: [],
+                toolProf: [],
+                languageProf: []
+            },
+            traits: ['wanderer'],
+            equipment: ['staff', 'hunting trap', 'animal trophy', 'traveler\'s clothes']
+        }
+    },
+
+    {
+        _id: '6',
+        image: '/images/thokk.jpg',
+        name: 'Thokk',
+        nickname: null,
+        race: 'half-orc',
+        class: 'barbarian',
+        subclass: null,
+        level: 2,
+        alignment: 'lawful good',
+        background: 'pirate',
+        description: 'Thokk grew up as the cabin boy for his father, an infamous pirate.  After reaching adulthood, Thokk took over the ship for a few years until passing on the torch to his younger cousin.  Although he does not advertise his somewhat storied past, Thokk still regularly exchanges letters with his retired father, detailing his adventures as a treasure hunter.',
+        stats: {
+            armorClass: 0,
+            initiative: 0,
+            speed: 0,
+            hitPointMax: 0,
+            profBonus: 0,
+            inspiration: false,
+            vitals: {
+                strength: 0,
+                strengthModifier: 0,
+                dexterity: 0,
+                dexModifier: 0,
+                constitution: 0,
+                constModifier: 0,
+                intelligence: 0,
+                intelModifier: 0,
+                wisdom: 0,
+                wisdomModifier: 0,
+                charisma: 0,
+                charismaModifier: 0
+            },
+            savingThrows: {
+                strengthST: 0,
+                dexterityST: 0,
+                constitutionST: 0,
+                intelligenceST: 0,
+                wisdomST: 0,
+                charismaST: 0
+            },
+            skills: {
+                acrobatics: 0,
+                animalHandling: 0,
+                arcana: 0,
+                athletics: 0,
+                deception: 0,
+                history: 0,
+                insight: 0,
+                intimidation: 0,
+                investigation: 0,
+                medicine: 0,
+                nature: 0,
+                perception: 0,
+                performance: 0,
+                persuasion: 0,
+                religion: 0,
+                slightOfHand: 0,
+                stealth: 0,
+                survival: 0
+            },
+            proficiencies: {
+                weaponsProf: [],
+                armorProf: [],
+                toolProf: [],
+                languageProf: []
+            },
+            traits: [],
+            equipment: []
+        }
     }
 ]
 

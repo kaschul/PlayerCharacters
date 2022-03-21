@@ -176,6 +176,14 @@ const CharacterScreen = () => {
                 <Row><strong>Hit Point Max:</strong></Row>
                 <Row>{character.stats.hitPointMax}</Row>
               </Col>
+              <Col>
+                <Row><strong>Proficiency Bonus:</strong></Row>
+                <Row>{character.stats.profBonus}</Row>
+              </Col>
+              <Col>
+                <Row><strong>Inspiration:</strong></Row>
+                <Row>{character.inspiration == true ? <div>'YES'</div> : <div>'NO'</div></Row>
+              </Col>
             </Row>
             <Row>
               <Col>
@@ -184,15 +192,14 @@ const CharacterScreen = () => {
                   <Col>
                     <Row>{character.stats.proficiencies.weaponsProf.map((p) => " [" + p + "] ")}</Row>
                     <Row>{character.stats.proficiencies.armorProf.map((p) => " [" + p + "] ")}</Row>
+                    <Row>{character.stats.proficiencies.toolProf.map((p) => " [" + p + "] ")}</Row>
                     <Row>{character.stats.proficiencies.languageProf.map((p) => " [" + p + "] ")}</Row>
                   </Col>
                 </Row>
                 <Row><strong>Features and Traits:</strong></Row>
-                <Row>
-                  <Col>
-                    <Row>{character.stats.traits.map((p) => " [" + p + "] ")}</Row>
-                  </Col>
-                </Row>
+                <Row>{character.stats.traits.map((p) => " [" + p + "] ")}</Row>
+                <Row><strong>Equipment:</strong></Row>  
+                <Row>{character.stats.equipment.map((p) => " [" + p + "] ")}</Row>
               </Col>
             </Row>
           </Col>

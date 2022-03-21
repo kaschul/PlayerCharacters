@@ -141,6 +141,78 @@ const characters = [
             traits: ['darkvision', 'keen senses', 'fey ancestry', 'trance'],
             equipment: ['Helm of Comprehending Languages', 'quarterstaff', 'shortsword']
         }
+    },
+
+    {
+        id: '_3',
+        image: '/images/lark.jpg',
+        name: 'Lark',
+        nickname: null,
+        race: 'air genasi',
+        class: 'rogue',
+        subclass: null,
+        level: 1,
+        alignment: 'neutral',
+        background: '',
+        description: 'Adopted into a human family as a small child, Lark grew up in a well-adjusted home with two loving fathers and a gaggle of other orphans the couple had taken in over the years.  Inquisitive and determined, they picked up lockpicking and trap disarming in a (somewhat futile) effort to avoid the frequent pranks their siblings and the other village children delighted in.  Motivated by a growing wanderlust, Lark has set off from home to find their purpose in life.',
+        stats: {
+            armorClass: 0,
+            initiative: 0,
+            speed: 30,
+            hitPointMax: 0,
+            profBonus: 0,
+            inspiration: false,
+            vitals: {
+                strength: 0,
+                strengthModifier: 0,
+                dexterity: 1,
+                dexModifier: 0,
+                constitution: 2,
+                constModifier: 0,
+                intelligence: 0,
+                intelModifier: 0,
+                wisdom: 0,
+                wisdomModifier: 0,
+                charisma: 0,
+                charismaModifier: 0
+            },
+            savingThrows: {
+                strengthST: 0,
+                dexterityST: 0,
+                constitutionST: 0,
+                intelligenceST: 0,
+                wisdomST: 0,
+                charismaST: 0
+            },
+            skills: {
+                acrobatics: 0,
+                animalHandling: 0,
+                arcana: 0,
+                athletics: 0,
+                deception: 0,
+                history: 0,
+                insight: 0,
+                intimidation: 0,
+                investigation: 0,
+                medicine: 0,
+                nature: 0,
+                perception: 0,
+                performance: 0,
+                persuasion: 0,
+                religion: 0,
+                slightOfHand: 0,
+                stealth: 0,
+                survival: 0
+            },
+            proficiencies: {
+                weaponsProf: ['simple weapons', 'hand crossbows', 'longswords', 'rapiers', 'shortswords'],
+                armorProf: ['light armor'],
+                toolProf: ['thieves\' tools'],
+                languageProf: ['common', 'thieves\' cant']
+            },
+            traits: ['unending breath', 'mingle with the wind', 'sneak attack'],
+            equipment: ['dagger x2', 'shortbow', 'arrows x 20', 'leather armor']
+        }
     }
 ]
 

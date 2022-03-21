@@ -241,11 +241,11 @@ const characters = [
                 dexModifier: 0,
                 constitution: 0,
                 constModifier: 0,
-                intelligence: 0,
+                intelligence: 1,
                 intelModifier: 0,
                 wisdom: 0,
                 wisdomModifier: 0,
-                charisma: 0,
+                charisma: 2,
                 charismaModifier: 0
             },
             savingThrows: {
@@ -282,7 +282,7 @@ const characters = [
                 toolProf: [],
                 languageProf: []
             },
-            traits: [],
+            traits: ['darkvision', 'hellish resistance', 'infernal legacy'],
             equipment: []
         }
     },
@@ -354,7 +354,7 @@ const characters = [
                 toolProf: [],
                 languageProf: []
             },
-            traits: ['wanderer'],
+            traits: ['wanderer', 'darkvision', 'keen senses', 'fey ancestry', 'trance'],
             equipment: ['staff', 'hunting trap', 'animal trophy', 'traveler\'s clothes']
         }
     },
@@ -379,11 +379,11 @@ const characters = [
             profBonus: 0,
             inspiration: false,
             vitals: {
-                strength: 0,
+                strength: 2,
                 strengthModifier: 0,
                 dexterity: 0,
                 dexModifier: 0,
-                constitution: 0,
+                constitution: 1,
                 constModifier: 0,
                 intelligence: 0,
                 intelModifier: 0,
@@ -426,7 +426,7 @@ const characters = [
                 toolProf: [],
                 languageProf: []
             },
-            traits: [],
+            traits: ['darkvision', 'menacing', 'relentless', 'endurance', 'savage attacks'],
             equipment: []
         }
     }

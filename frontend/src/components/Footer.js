@@ -6,7 +6,7 @@ const Footer = () => {
     <footer>
         <Container>
             <Row>
-                <Col class='text-center py-3'>
+                <Col class='text-center py-6'>
                     <p>This page is unofficial Fan Content permitted under the Fan Content Policy. Not approved/endorsed by Wizards. Portions of the materials used are property of Wizards of the Coast. ©Wizards of the Coast LLC.</p>
                     <p>Images are from Picrew: Fantasy Character Maker by Deerinspotlight, found at https://picrew.me/image_maker/708151, permitted for non-commercial use.</p>
                 </Col>

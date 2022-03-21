@@ -1,9 +1,10 @@
 import React from 'react'
 import { Link, useParams } from 'react-router-dom'
-import { Row, Col, Image, ListGroup, Card } from 'react-bootstrap'
+import { Row, Col, Image, Card } from 'react-bootstrap'
 import characters from '../characters';
 
 const CharacterScreen = () => {
+ 
   const params = useParams();
 
   const character = characters.find((p) => p._id === params.id)
@@ -19,21 +20,19 @@ const CharacterScreen = () => {
             <Image src={character.image} alt={character.name} fluid />
           </Col>
           <Col>
-            <ListGroup variant='flush'>
-              <ListGroup.Item>
-                <span><h3>{character.name}</h3> {character.nickname != null && <div> ({character.nickname}) </div>}</span>
-              </ListGroup.Item>
-              <ListGroup.Item>
+              <Row>
+                <span><h3>{character.name}</h3> {character.nickname != null && <>(aka {character.nickname})</>}</span>
+              </Row>
+              <Row>
                 {character.race} - {character.alignment}
-              </ListGroup.Item>
-              <ListGroup.Item>
+              </Row>
+              <Row>
                 {/* character subclass only displayed if not null */}
-                Lvl {character.level} {character.class} {character.subclass != null && <div> - {character.subclass}</div>}
-              </ListGroup.Item>
-              <ListGroup.Item>
+                <span>Lvl {character.level} {character.class} {character.subclass != null && <>- {character.subclass}</>}</span>
+              </Row>
+              <Row>
                 {character.background}
-              </ListGroup.Item>
-            </ListGroup>
+              </Row>
           </Col>
         </Row>
         <Row>
@@ -53,108 +52,115 @@ const CharacterScreen = () => {
               + modifier if > 0, 
               - modifier if < 0, and 
               -- if modifier == 0*/} 
+            <div id='vitals'>
             <Row>
               <strong>Strength:</strong> 
             </Row>
             <Row>
               {character.stats.vitals.strength} 
-              ({character.stats.vitals.strengthModifier < 0 ? 
-                <div> - {character.stats.vitals.strengthModifier} </div> :
+              &nbsp;({character.stats.vitals.strengthModifier < 0 ? 
+                <> {character.stats.vitals.strengthModifier} </> :
                 character.stats.vitals.strengthModifier > 0 ?
-                <div> + {character.stats.vitals.strengthModifier} </div> :
-                <div> -- </div>})
+                <> + {character.stats.vitals.strengthModifier} </> :
+                <> -- </>})
             </Row>
             <Row>
               <strong>Dexterity:</strong> 
             </Row>
             <Row>
               {character.stats.vitals.dexterity} 
-              ({character.stats.vitals.dexModifier < 0 ? 
-                <div> - {character.stats.vitals.dexModifier} </div> : 
+              &nbsp;({character.stats.vitals.dexModifier < 0 ? 
+                <> {character.stats.vitals.dexModifier} </> : 
                 character.stats.vitals.dexModifier > 0 ?
-                <div> + {character.stats.vitals.dexModifier} </div> :
-                <div> -- </div>})
+                <> + {character.stats.vitals.dexModifier} </> :
+                <> -- </>})
             </Row>
             <Row >
               <strong>Constitution:</strong>
             </Row>
             <Row>
               {character.stats.vitals.constitution} 
-              ({character.stats.vitals.constModifier < 0 ? 
-                <div> - {character.stats.vitals.constModifier} </div> :
+              &nbsp;({character.stats.vitals.constModifier < 0 ? 
+                <> {character.stats.vitals.constModifier} </> :
                 character.stats.vitals.constModifier > 0 ? 
-                <div> + {character.stats.vitals.constModifier} </div> :
-                <div> -- </div>})
+                <> + {character.stats.vitals.constModifier} </> :
+                <> -- </>})
             </Row>
             <Row>
               <strong>Intelligence:</strong>
             </Row>
             <Row>
               {character.stats.vitals.intelligence} 
-              ({character.stats.vitals.intelModifier < 0 ? 
-                <div> - {character.stats.vitals.intelModifier} </div> : 
+              &nbsp;({character.stats.vitals.intelModifier < 0 ? 
+                <> {character.stats.vitals.intelModifier} </> : 
                 character.stats.vitals.intelModifier > 0 ?
-                <div> + {character.stats.vitals.intelModifier} </div> :
-                <div> -- </div>})
+                <> + {character.stats.vitals.intelModifier} </> :
+                <> -- </>})
             </Row>
             <Row>
               <strong>Wisdom:</strong>
             </Row>
             <Row>
               {character.stats.vitals.wisdom} 
-              ({character.stats.vitals.wisdomModifier < 0 ? 
-                <div> - {character.stats.vitals.wisdomModifier} </div> : 
+              &nbsp;({character.stats.vitals.wisdomModifier < 0 ? 
+                <> {character.stats.vitals.wisdomModifier} </> : 
                 character.stats.vitals.wisdomModifier > 0 ?
-                <div> + {character.stats.vitals.wisdomModifier} </div> :
-                <div> -- </div>})
+                <> + {character.stats.vitals.wisdomModifier} </> :
+                <> -- </>})
             </Row>
             <Row>
               <strong>Charisma:</strong> 
             </Row>
             <Row>
               {character.stats.vitals.charisma} 
-              ({character.stats.vitals.charismaModifier < 0 ? 
-                <div> - {character.stats.vitals.charismaModifier} </div> : 
+              &nbsp;({character.stats.vitals.charismaModifier < 0 ? 
+                <> {character.stats.vitals.charismaModifier} </> : 
                 character.stats.vitals.charismaModifier > 0 ?
-                <div> + {character.stats.vitals.charismaModifier} </div> :
-                <div> -- </div>})
+                <> + {character.stats.vitals.charismaModifier} </> :
+                <> -- </>})
             </Row>
+            </div>
           </Col>
           <Col>
+            <div id='savingThrows'>
             <Row>
                 <Col>
                   <Row><strong>Saving Throws:</strong></Row>
-                  <Row>Strength: {character.stats.savingThrows.strengthST}</Row>
-                  <Row>Dexterity: {character.stats.savingThrows.dexterityST}</Row>
-                  <Row>Constitution: {character.stats.savingThrows.constitutionST}</Row>
-                  <Row>Intelligence: {character.stats.savingThrows.intelligenceST}</Row>
-                  <Row>Wisdom: {character.stats.savingThrows.wisdomST}</Row>
-                  <Row>Charisma: {character.stats.savingThrows.charismaST}</Row>
+                  <Row>Strength:&nbsp;{character.stats.savingThrows.strengthST}</Row>
+                  <Row>Dexterity:&nbsp;{character.stats.savingThrows.dexterityST}</Row>
+                  <Row>Constitution:&nbsp;{character.stats.savingThrows.constitutionST}</Row>
+                  <Row>Intelligence:&nbsp;{character.stats.savingThrows.intelligenceST}</Row>
+                  <Row>Wisdom:&nbsp;{character.stats.savingThrows.wisdomST}</Row>
+                  <Row>Charisma:&nbsp;{character.stats.savingThrows.charismaST}</Row>
                 </Col>
             </Row>
+            </div>
+            <br></br>
+            <div id='skills'>
             <Row>
                 <Col>
                   <Row><strong>Skills:</strong></Row>
-                  <Row>Acrobatics: {character.stats.skills.acrobatics}</Row>
-                  <Row>Animal Handling: {character.stats.skills.animalHandling}</Row>
-                  <Row>Arcana: {character.stats.skills.arcana}</Row>
-                  <Row>Athletics: {character.stats.skills.athletics}</Row>
-                  <Row>Deception: {character.stats.skills.deception}</Row>
-                  <Row>History: {character.stats.skills.history}</Row>
-                  <Row>Insight: {character.stats.skills.insight}</Row>
-                  <Row>Intimidation: {character.stats.skills.intimidation}</Row>
-                  <Row>Investigation: {character.stats.skills.investigation}</Row>
-                  <Row>Medicine: {character.stats.skills.medicine}</Row>
-                  <Row>Nature: {character.stats.skills.nature}</Row>
-                  <Row>Perception: {character.stats.skills.perception}</Row>
-                  <Row>Performance: {character.stats.skills.performance}</Row>
-                  <Row>Persuasion: {character.stats.skills.persuasion}</Row>
-                  <Row>Religion: {character.stats.skills.religion}</Row>
-                  <Row>Slight of Hand: {character.stats.skills.slightOfHand}</Row>
-                  <Row>Stealth: {character.stats.skills.stealth}</Row>
-                  <Row>Survival: {character.stats.skills.survival}</Row>
+                  <Row>Acrobatics:&nbsp;{character.stats.skills.acrobatics}</Row>
+                  <Row>Animal Handling:&nbsp;{character.stats.skills.animalHandling}</Row>
+                  <Row>Arcana:&nbsp;{character.stats.skills.arcana}</Row>
+                  <Row>Athletics:&nbsp;{character.stats.skills.athletics}</Row>
+                  <Row>Deception:&nbsp;{character.stats.skills.deception}</Row>
+                  <Row>History:&nbsp;{character.stats.skills.history}</Row>
+                  <Row>Insight:&nbsp;{character.stats.skills.insight}</Row>
+                  <Row>Intimidation:&nbsp;{character.stats.skills.intimidation}</Row>
+                  <Row>Investigation:&nbsp;{character.stats.skills.investigation}</Row>
+                  <Row>Medicine:&nbsp;{character.stats.skills.medicine}</Row>
+                  <Row>Nature:&nbsp;{character.stats.skills.nature}</Row>
+                  <Row>Perception:&nbsp;{character.stats.skills.perception}</Row>
+                  <Row>Performance:&nbsp;{character.stats.skills.performance}</Row>
+                  <Row>Persuasion:&nbsp;{character.stats.skills.persuasion}</Row>
+                  <Row>Religion:&nbsp;{character.stats.skills.religion}</Row>
+                  <Row>Slight of Hand:&nbsp;{character.stats.skills.slightOfHand}</Row>
+                  <Row>Stealth:&nbsp;{character.stats.skills.stealth}</Row>
+                  <Row>Survival:&nbsp;{character.stats.skills.survival}</Row>
                 </Col>
             </Row>
+            </div>
           </Col>
           <Col>
             <Row>
@@ -168,12 +174,12 @@ const CharacterScreen = () => {
               </Col>
               <Col>
                 <Row><strong>Speed:</strong></Row>
-                <Row>{character.stats.speed}</Row>
+                <Row>{character.stats.speed} ft</Row>
               </Col>
             </Row>
             <Row>
               <Col>
-                <Row><strong>Hit Point Max:</strong></Row>
+                <Row><strong>Hit Points:</strong></Row>
                 <Row>{character.stats.hitPointMax}</Row>
               </Col>
               <Col>
@@ -182,7 +188,7 @@ const CharacterScreen = () => {
               </Col>
               <Col>
                 <Row><strong>Inspiration:</strong></Row>
-                <Row>{character.inspiration == true ? <div>'YES'</div> : <div>'NO'</div>}</Row>
+                <Row>{character.inspiration === true ? <div>'YES'</div> : <div>'NO'</div>}</Row>
               </Col>
             </Row>
             <Row>

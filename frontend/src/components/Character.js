@@ -12,12 +12,12 @@ const Character = ({character}) => {
 
       <Card.Body>
         <Link to={`/character/${character._id}`}>
-          <Card.Title as='div'>
+          <Card.Title as='div' class='text-center'>
             <strong>{character.name}</strong>
           </Card.Title>
         </Link>
 
-        <Card.Text as='div'>
+        <Card.Text as='div' class='text-center'>
           <div className='my-3'>
             <p>{character.race} {character.class}</p>
           </div>

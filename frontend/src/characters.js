@@ -1,6 +1,6 @@
 const characters = [
     {
-        id: '_1',
+        _id: '1',
         image: '/images/mindartis.jpg',
         name: 'Mindartis Liadon',
         nickname: 'Mindy',
@@ -72,7 +72,7 @@ const characters = [
     },
 
     {
-        id: '_2',
+        _id: '2',
         image: '/images/enna.jpg',
         name: 'Enna Xiloscient',
         nickname: null,
@@ -144,7 +144,7 @@ const characters = [
     },
 
     {
-        id: '_3',
+        _id: '3',
         image: '/images/lark.jpg',
         name: 'Lark',
         nickname: null,
@@ -221,7 +221,7 @@ export default characters
 /* template for character object
 
 {
-        id: '_1',
+        _id: '0',
         image: '',
         name: '',
         nickname: '',

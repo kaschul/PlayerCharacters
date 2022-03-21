@@ -126,7 +126,7 @@ const CharacterScreen = () => {
           </Col>
           
           <Col>
-          
+
             <Row>
               <Col>
                   <Row><strong>AC:</strong></Row>
@@ -157,6 +157,8 @@ const CharacterScreen = () => {
                   <Row><span>{character.inspiration === true ? <div>'YES'</div> : <div>'NO'</div>}</span></Row>
               </Col>
             </Row>
+
+            <br></br>
 
             <Row>
               <Col>

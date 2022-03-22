@@ -39,9 +39,10 @@ const CharacterScreen = () => {
               <Row>
                 <p> {character.description} </p>
               </Row>
-              
+  
               <Row>  {/* Misc character stats  */}
-                <Col class='align-items-center'>
+                <Col sm={2}></Col>
+                <Col sm={4} class='align-items-center'>
           
                   <Row><strong class='text-center'>Armor Class:</strong></Row>
                   <Row><span class='text-center'>{character.stats.armorClass}</span></Row>
@@ -57,7 +58,7 @@ const CharacterScreen = () => {
                   <Row><span class='text-center'>{character.stats.speed} ft</span></Row>
             
                 </Col>
-                <Col class='align-items-center'>
+                <Col sm={4} class='align-items-center'>
 
                   <Row><strong class='text-center'>Hit Points:</strong></Row>
                   <Row><span class='text-center'>{character.stats.hitPointMax}</span></Row>
@@ -65,13 +66,14 @@ const CharacterScreen = () => {
                   <br></br>
 
                   <Row><strong class='text-center'>Proficiency Bonus:</strong></Row>
-                  <Row><span class='text-center'>{character.stats.profBonus}</span></Row>
+                  <Row><span class='text-center'>+ {character.stats.profBonus}</span></Row>
                   
                   <br></br>
 
                   <Row><strong class='text-center'>Inspiration:</strong></Row>
                   <Row><span class='text-center'>{character.inspiration === true ? <div>'YES'</div> : <div>'NO'</div>}</span></Row>
                 </Col>
+                <Col sm={2}></Col>
               </Row>  {/* end misc character stats  */}
           </Col>
         </Row>
@@ -80,38 +82,30 @@ const CharacterScreen = () => {
 {/* NEW CARD */}
 
       <Card>  {/* character stats card */}
+      <Card.Text>
       <Row>
-      <Col xs={6}>
+      <Col lg={6}>
         <Row> {/* Row 1 - Column Titles */}
-            <Col xs={2}></Col>
-            <Col xs={9}>
-            <span>
-            <strong>STATS</strong>
-            &nbsp;&nbsp;-&nbsp;&nbsp;
-            <strong>(MODIFIERS)</strong>
-            &nbsp;&nbsp;-&nbsp;&nbsp;
-            <strong>SAVING THROWS</strong>
-            &nbsp;&nbsp;-&nbsp;&nbsp;
-            <strong>SKILLS</strong>
-            </span>
-            </Col>
+          <Col xs={2}></Col>
+          <Col xs={9}>
+            <strong> STATS&nbsp;&nbsp;-&nbsp;&nbsp;(MODIFIERS)&nbsp;&nbsp;-&nbsp;&nbsp;SAVING THROWS&nbsp;&nbsp;-&nbsp;&nbsp;SKILLS </strong>
+          </Col>
         </Row> {/* End Row 1 - Column Titles */}
-
+        <hr/>
 {/* ------------------- */}
         
-        <br></br>
 
         <Row> {/* Row 2 - Strength */}
 
           <Col xs={3}> {/* Col 1 - Stat title */}
             <Row>
-              <strong>STRENGTH:</strong>
+              <strong class='text-nowrap'>STRENGTH:</strong>
             </Row>
           </Col>
 
           <Col xs={1}> {/* Col 2 - Stats */}
             <Row>
-              <span>{character.stats.vitals.strength}</span>
+              <span class='text-nowrap'>{character.stats.vitals.strength}</span>
             </Row>
           </Col>
 
@@ -119,7 +113,7 @@ const CharacterScreen = () => {
             <Row>
               <span>
               ({character.stats.vitals.strengthModifier < 0 ? 
-                <> {character.stats.vitals.strengthModifier} </> :
+                <> - {Math.abs(character.stats.vitals.strengthModifier)} </> :
                 character.stats.vitals.strengthModifier > 0 ?
                 <> + {character.stats.vitals.strengthModifier} </> :
                 <> -- </>})
@@ -149,13 +143,13 @@ const CharacterScreen = () => {
 
           <Col xs={3}> {/* Col 1 - Stat title */}
             <Row>
-              <strong>DEXTERITY:</strong>
+              <strong class='text-nowrap'>DEXTERITY:</strong>
             </Row>
           </Col>
 
           <Col xs={1}> {/* Col 2 - Stats */}
             <Row>
-              <span>{character.stats.vitals.dexterity}</span>
+              <span class='text-nowrap'>{character.stats.vitals.dexterity}</span>
             </Row>
           </Col>
 
@@ -163,7 +157,7 @@ const CharacterScreen = () => {
             <Row>
               <span>
               ({character.stats.vitals.dexModifier < 0 ? 
-                <> {character.stats.vitals.dexModifier} </> :
+                <> - {Math.abs(character.stats.vitals.dexModifier)} </> :
                 character.stats.vitals.dexModifier > 0 ?
                 <> + {character.stats.vitals.dexModifier} </> :
                 <> -- </>})
@@ -203,13 +197,13 @@ const CharacterScreen = () => {
 
           <Col xs={3}> {/* Col 1 - Stat title */}
             <Row>
-              <strong>CONSTITUTION:</strong>
+              <strong class='text-nowrap'>CONSTITUTION:</strong>
             </Row>
           </Col>
 
           <Col xs={1}> {/* Col 2 - Stats */}
             <Row>
-              <span>{character.stats.vitals.constitution}</span>
+              <span class='text-nowrap'>{character.stats.vitals.constitution}</span>
             </Row>
           </Col>
 
@@ -217,7 +211,7 @@ const CharacterScreen = () => {
             <Row>
               <span>
               ({character.stats.vitals.constModifier < 0 ? 
-                <> {character.stats.vitals.constModifier} </> :
+                <> - {Math.abs(character.stats.vitals.constModifier)} </> :
                 character.stats.vitals.constModifier > 0 ?
                 <> + {character.stats.vitals.constModifier} </> :
                 <> -- </>})
@@ -247,13 +241,13 @@ const CharacterScreen = () => {
 
           <Col xs={3}> {/* Col 1 - Stat title */}
             <Row>
-              <strong>INTELLIGENCE:</strong>
+              <strong class='text-nowrap'>INTELLIGENCE:</strong>
             </Row>
           </Col>
 
           <Col xs={1}> {/* Col 2 - Stats */}
             <Row>
-              <span>{character.stats.vitals.intelligence}</span>
+              <span class='text-nowrap'>{character.stats.vitals.intelligence}</span>
             </Row>
           </Col>
 
@@ -261,7 +255,7 @@ const CharacterScreen = () => {
             <Row>
               <span>
               ({character.stats.vitals.intelModifier < 0 ? 
-                <> {character.stats.vitals.intelModifier} </> :
+                <> - {Math.abs(character.stats.vitals.intelModifier)} </> :
                 character.stats.vitals.intelModifier > 0 ?
                 <> + {character.stats.vitals.intelModifier} </> :
                 <> -- </>})
@@ -307,13 +301,13 @@ const CharacterScreen = () => {
 
           <Col xs={3}> {/* Col 1 - Stat title */}
             <Row>
-              <strong>WISDOM:</strong>
+              <strong class='text-nowrap'>WISDOM:</strong>
             </Row>
           </Col>
 
           <Col xs={1}> {/* Col 2 - Stats */}
             <Row>
-              <span>{character.stats.vitals.wisdom}</span>
+              <span class='text-nowrap'>{character.stats.vitals.wisdom}</span>
             </Row>
           </Col>
 
@@ -321,7 +315,7 @@ const CharacterScreen = () => {
             <Row>
               <span>
               ({character.stats.vitals.wisdomModifier < 0 ? 
-                <> {character.stats.vitals.wisdomModifier} </> :
+                <> - {Math.abs(character.stats.vitals.wisdomModifier)} </> :
                 character.stats.vitals.wisdomModifier > 0 ?
                 <> + {character.stats.vitals.wisdomModifier} </> :
                 <> -- </>})
@@ -367,13 +361,13 @@ const CharacterScreen = () => {
 
           <Col xs={3}> {/* Col 1 - Stat title */}
             <Row>
-              <strong>CHARISMA:</strong>
+              <strong class='text-nowrap'>CHARISMA:</strong>
             </Row>
           </Col>
 
           <Col xs={1}> {/* Col 2 - Stats */}
             <Row>
-              <span>{character.stats.vitals.charisma}</span>
+              <span class='text-nowrap'>{character.stats.vitals.charisma}</span>
             </Row>
           </Col>
 
@@ -381,7 +375,7 @@ const CharacterScreen = () => {
             <Row>
               <span>
               ({character.stats.vitals.charismaModifier < 0 ? 
-                <> {character.stats.vitals.charismaModifier} </> :
+                <> - {Math.abs(character.stats.vitals.charismaModifier)} </> :
                 character.stats.vitals.charismaModifier > 0 ?
                 <> + {character.stats.vitals.charismaModifier} </> :
                 <> -- </>})
@@ -418,9 +412,11 @@ const CharacterScreen = () => {
     </Col>
 
 
-    <Col md={6}>
+    <Col lg={6}>
+      <Row>
+      <Col md={1}></Col>
 
-
+      <Col md={10}>
       <br></br>
 
       <Row><strong>EQUIPMENT:</strong></Row> 
@@ -432,9 +428,9 @@ const CharacterScreen = () => {
       <Row><strong>PROFICIENCIES:</strong></Row>
       <Row>
         <Col>
-          <Row><span>{character.stats.proficiencies.weaponsProf.map((p) => " [" + p + "] ")}</span></Row>
-          <Row><span>{character.stats.proficiencies.armorProf.map((p) => " [" + p + "] ")}</span></Row>
-          <Row><span>{character.stats.proficiencies.toolProf.map((p) => " [" + p + "] ")}</span></Row>
+          <Row><span>{character.stats.proficiencies.weaponsProf.map((p) => "  [" + p + "]  ")}</span></Row>
+          <Row><span>{character.stats.proficiencies.armorProf.map((p) => "  [" + p + "]  ")}</span></Row>
+          <Row><span>{character.stats.proficiencies.toolProf.map((p) => "  [" + p + "]  ")}</span></Row>
         </Col>
       </Row>
 
@@ -442,18 +438,22 @@ const CharacterScreen = () => {
       <br></br>
 
       <Row><strong>LANGUAGES:</strong></Row>
-      <Row><span>{character.stats.proficiencies.languageProf.map((p) => " [" + p + "] ")}</span></Row>
+      <Row><span>{character.stats.proficiencies.languageProf.map((p) => "  [" + p + "]  ")}</span></Row>
 
       <br></br>
       <br></br>
 
       <Row><strong>FEATURES & TRAITS:</strong></Row>
-      <Row><span>{character.stats.traits.map((p) => " [" + p + "] ")}</span></Row>
+      <Row><span>{character.stats.traits.map((p) => "  [" + p + "]  ")}</span></Row>
 
       <br></br>
-        
+      </Col>
+
+      <Col md={1}></Col>
+      </Row>  
     </Col>
     </Row>
+    </Card.Text>
     </Card>
     </>
   )

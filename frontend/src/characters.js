@@ -794,7 +794,7 @@ const characters = [
     {
         _id: '12',
         image: '/images/unitLVI.jpg',
-        name: 'Unit LVI',
+        name: 'unit LVI',
         nickname: 'Levi',
         race: 'warforged',
         class: 'fighter',

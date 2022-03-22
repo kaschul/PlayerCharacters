@@ -19,6 +19,7 @@ const CharacterScreen = () => {
           <Col md={6}>
             <Image src={character.image} alt={character.name} fluid />
           </Col>
+          
           <Col>
               <Row>
                 <span><h3>{character.name}</h3> {character.nickname != null && <>(aka {character.nickname})</>}</span>
@@ -38,96 +39,83 @@ const CharacterScreen = () => {
               <Row>
                 <p> {character.description} </p>
               </Row>
+              
+              <Row>  {/* Misc character stats  */}
+                <Col class='align-items-center'>
+          
+                  <Row><strong class='text-center'>Armor Class:</strong></Row>
+                  <Row><span class='text-center'>{character.stats.armorClass}</span></Row>
+               
+                  <br></br>
+
+                  <Row><strong class='text-center'>Initiative:</strong></Row>
+                  <Row><span class='text-center'>{character.stats.initiative}</span></Row>
+
+                  <br></br>
+
+                  <Row><strong class='text-center'>Speed:</strong></Row>
+                  <Row><span class='text-center'>{character.stats.speed} ft</span></Row>
+            
+                </Col>
+                <Col class='align-items-center'>
+
+                  <Row><strong class='text-center'>Hit Points:</strong></Row>
+                  <Row><span class='text-center'>{character.stats.hitPointMax}</span></Row>
+               
+                  <br></br>
+
+                  <Row><strong class='text-center'>Proficiency Bonus:</strong></Row>
+                  <Row><span class='text-center'>{character.stats.profBonus}</span></Row>
+                  
+                  <br></br>
+
+                  <Row><strong class='text-center'>Inspiration:</strong></Row>
+                  <Row><span class='text-center'>{character.inspiration === true ? <div>'YES'</div> : <div>'NO'</div>}</span></Row>
+                </Col>
+              </Row>  {/* end misc character stats  */}
           </Col>
         </Row>
       </Card>  {/* End character intro card */}
 
-
-      <Card>  {/* Misc character stats card */}
-        <Row>
-          <Col>
-            <Row><strong>AC:</strong></Row>
-               <Row><span>{character.stats.armorClass}</span></Row>
-               
-               <br></br>
-
-               <Row><strong>Initiative:</strong></Row>
-               <Row><span>{character.stats.initiative}</span></Row>
-
-               <br></br>
-
-               <Row><strong>Speed:</strong></Row>
-               <Row><span>{character.stats.speed} ft</span></Row>
-           </Col>
-           <Col>
-               <Row><strong>Hit Points:</strong></Row>
-               <Row><span>{character.stats.hitPointMax}</span></Row>
-               
-               <br></br>
-
-               <Row><strong>Proficiency Bonus:</strong></Row>
-               <Row><span>{character.stats.profBonus}</span></Row>
-                  
-               <br></br>
-
-               <Row><strong>Inspiration:</strong></Row>
-               <Row><span>{character.inspiration === true ? <div>'YES'</div> : <div>'NO'</div>}</span></Row>
-           </Col>
-        </Row>
-      </Card>  {/* end misc character stats card */}
-
 {/* NEW CARD */}
 
       <Card>  {/* character stats card */}
-        <Card.Title as='div'>
-          <strong>Character Stats</strong>
-        </Card.Title>
-
-        <Card.Text as='div'>
-        <div className='my-3'>
-
-
+      <Row>
+      <Col xs={6}>
         <Row> {/* Row 1 - Column Titles */}
-          <Col>
-            <></>
-          </Col>
-
-          <Col>
+            <Col xs={2}></Col>
+            <Col xs={9}>
+            <span>
             <strong>STATS</strong>
-          </Col>
-
-          <Col>
-            <strong>MODIFIERS</strong>
-          </Col>
-          
-          <Col>
+            &nbsp;&nbsp;-&nbsp;&nbsp;
+            <strong>(MODIFIERS)</strong>
+            &nbsp;&nbsp;-&nbsp;&nbsp;
             <strong>SAVING THROWS</strong>
-          </Col>
-          
-          <Col>
+            &nbsp;&nbsp;-&nbsp;&nbsp;
             <strong>SKILLS</strong>
-          </Col>
+            </span>
+            </Col>
         </Row> {/* End Row 1 - Column Titles */}
 
 {/* ------------------- */}
-        <div class='hr'></div>
+        
         <br></br>
 
         <Row> {/* Row 2 - Strength */}
 
-          <Col> {/* Col 1 - Stat title */}
+          <Col xs={3}> {/* Col 1 - Stat title */}
             <Row>
               <strong>STRENGTH:</strong>
             </Row>
           </Col>
 
-          <Col> {/* Col 2 - Stats */}
+          <Col xs={1}> {/* Col 2 - Stats */}
             <Row>
               <span>{character.stats.vitals.strength}</span>
             </Row>
           </Col>
 
-          <Col> {/* Col 3 - Modifiers */}
+          <Col xs={2}> {/* Col 3 - Modifiers */}
             <Row>
               <span>
               ({character.stats.vitals.strengthModifier < 0 ? 
@@ -139,39 +127,39 @@ const CharacterScreen = () => {
             </Row>
           </Col>
 
-          <Col> {/* Col 4 - Saving Throws */}
+          <Col xs={2}> {/* Col 4 - Saving Throws */}
             <Row>
               <span>{character.stats.savingThrows.strengthST}</span>
             </Row>
           </Col>
           
-          <Col> {/* Col 5 - Skills (strength - athletics) */}
+          <Col xs={4}> {/* Col 5 - Skills (strength - athletics) */}
             <Row>
-              <span>Athletics:&nbsp;{character.stats.skills.athletics}</span>
+              <span>Athletics:&nbsp;&nbsp;{character.stats.skills.athletics}</span>
             </Row>
           </Col>
 
         </Row> {/* End Row 2 - strength */}
 
 {/* ------------------- */}
-        <div class='hr'></div>
-        <br></br>
+  
+        <hr/>
 
         <Row> {/* Row 3 - Dexterity */}
 
-          <Col> {/* Col 1 - Stat title */}
+          <Col xs={3}> {/* Col 1 - Stat title */}
             <Row>
               <strong>DEXTERITY:</strong>
             </Row>
           </Col>
 
-          <Col> {/* Col 2 - Stats */}
+          <Col xs={1}> {/* Col 2 - Stats */}
             <Row>
               <span>{character.stats.vitals.dexterity}</span>
             </Row>
           </Col>
 
-          <Col> {/* Col 3 - Modifiers */}
+          <Col xs={2}> {/* Col 3 - Modifiers */}
             <Row>
               <span>
               ({character.stats.vitals.dexModifier < 0 ? 
@@ -183,23 +171,23 @@ const CharacterScreen = () => {
             </Row>
           </Col>
 
-          <Col> {/* Col 4 - Saving Throws */}
+          <Col xs={2}> {/* Col 4 - Saving Throws */}
             <Row>
               <span>{character.stats.savingThrows.dexterityST}</span>
             </Row>
           </Col>
 
-          <Col> {/* Col 5 - Skills (dex - acrobatics, sleight of hand, stealth) */}
+          <Col xs={4}> {/* Col 5 - Skills (dex - acrobatics, sleight of hand, stealth) */}
             <Row>
               <Col>
                 <Row>
-                  <span>Acrobatics:&nbsp;{character.stats.skills.acrobatics}</span>
+                  <span>Acrobatics:&nbsp;&nbsp;{character.stats.skills.acrobatics}</span>
                 </Row>
                 <Row>
-                  <span>Slight of Hand:&nbsp;{character.stats.skills.slightOfHand}</span>
+                  <span>Slight of Hand:&nbsp;&nbsp;{character.stats.skills.slightOfHand}</span>
                 </Row>
                 <Row>
-                  <span>Stealth:&nbsp;{character.stats.skills.stealth}</span>
+                  <span>Stealth:&nbsp;&nbsp;{character.stats.skills.stealth}</span>
                 </Row>
               </Col>
             </Row>
@@ -208,24 +196,24 @@ const CharacterScreen = () => {
         </Row> {/* End Row 3 - dexterity */}
 
 {/* ------------------- */}
-        <div class='hr'></div>
-        <br></br>
+        
+        <hr/>
 
         <Row> {/* Row 4 - Constitution */}
 
-          <Col> {/* Col 1 - Stat title */}
+          <Col xs={3}> {/* Col 1 - Stat title */}
             <Row>
               <strong>CONSTITUTION:</strong>
             </Row>
           </Col>
 
-          <Col> {/* Col 2 - Stats */}
+          <Col xs={1}> {/* Col 2 - Stats */}
             <Row>
               <span>{character.stats.vitals.constitution}</span>
             </Row>
           </Col>
 
-          <Col> {/* Col 3 - Modifiers */}
+          <Col xs={2}> {/* Col 3 - Modifiers */}
             <Row>
               <span>
               ({character.stats.vitals.constModifier < 0 ? 
@@ -237,13 +225,13 @@ const CharacterScreen = () => {
             </Row>
           </Col>
 
-          <Col> {/* Col 4 - Saving Throws */}
+          <Col xs={2}> {/* Col 4 - Saving Throws */}
             <Row>
               <span>{character.stats.savingThrows.constitutionST}</span>
             </Row>
           </Col>
 
-          <Col> {/* Col 5 - Skills (constitution - none) */}
+          <Col xs={4}> {/* Col 5 - Skills (constitution - none) */}
             <Row>
               <></>
             </Row>
@@ -252,24 +240,24 @@ const CharacterScreen = () => {
         </Row> {/* End Row 4 - const */}
 
 {/* ------------------- */}
-        <div class='hr'></div>
-        <br></br>
+        
+        <hr/>
 
         <Row> {/* Row 5 - Intelligence */}
 
-          <Col> {/* Col 1 - Stat title */}
+          <Col xs={3}> {/* Col 1 - Stat title */}
             <Row>
               <strong>INTELLIGENCE:</strong>
             </Row>
           </Col>
 
-          <Col> {/* Col 2 - Stats */}
+          <Col xs={1}> {/* Col 2 - Stats */}
             <Row>
               <span>{character.stats.vitals.intelligence}</span>
             </Row>
           </Col>
 
-          <Col> {/* Col 3 - Modifiers */}
+          <Col xs={2}> {/* Col 3 - Modifiers */}
             <Row>
               <span>
               ({character.stats.vitals.intelModifier < 0 ? 
@@ -281,29 +269,29 @@ const CharacterScreen = () => {
             </Row>
           </Col>
 
-          <Col> {/* Col 4 - Saving Throws */}
+          <Col xs={2}> {/* Col 4 - Saving Throws */}
             <Row>
               <span>{character.stats.savingThrows.intelligenceST}</span>
             </Row>
           </Col>
 
-          <Col> {/* Col 5 - Skills (intelligence - arcana, history, investigation, nature, religion) */}
+          <Col xs={4}> {/* Col 5 - Skills (intelligence - arcana, history, investigation, nature, religion) */}
             <Row>
               <Col>
                 <Row>
-                  <span>Arcana:&nbsp;{character.stats.skills.arcana}</span>
+                  <span>Arcana:&nbsp;&nbsp;{character.stats.skills.arcana}</span>
                 </Row>
                 <Row>
-                  <span>History:&nbsp;{character.stats.skills.history}</span>
+                  <span>History:&nbsp;&nbsp;{character.stats.skills.history}</span>
                 </Row>
                 <Row>
-                  <span>Investigation:&nbsp;{character.stats.skills.investigation}</span>
+                  <span>Investigation:&nbsp;&nbsp;{character.stats.skills.investigation}</span>
                 </Row>
                 <Row>
-                  <span>Nature:&nbsp;{character.stats.skills.nature}</span>
+                  <span>Nature:&nbsp;&nbsp;{character.stats.skills.nature}</span>
                 </Row>
                 <Row>
-                  <span>Religion:&nbsp;{character.stats.skills.religion}</span>
+                  <span>Religion:&nbsp;&nbsp;{character.stats.skills.religion}</span>
                 </Row>
               </Col>
             </Row>
@@ -312,24 +300,24 @@ const CharacterScreen = () => {
         </Row> {/* End Row 5 - intel */}
 
 {/* ------------------- */}
-        <div class='hr'></div>
-        <br></br>
+        
+        <hr/>
 
         <Row> {/* Row 6 - Wisdom */}
 
-          <Col> {/* Col 1 - Stat title */}
+          <Col xs={3}> {/* Col 1 - Stat title */}
             <Row>
               <strong>WISDOM:</strong>
             </Row>
           </Col>
 
-          <Col> {/* Col 2 - Stats */}
+          <Col xs={1}> {/* Col 2 - Stats */}
             <Row>
               <span>{character.stats.vitals.wisdom}</span>
             </Row>
           </Col>
 
-          <Col> {/* Col 3 - Modifiers */}
+          <Col xs={2}> {/* Col 3 - Modifiers */}
             <Row>
               <span>
               ({character.stats.vitals.wisdomModifier < 0 ? 
@@ -341,29 +329,29 @@ const CharacterScreen = () => {
             </Row>
           </Col>
 
-          <Col> {/* Col 4 - Saving Throws */}
+          <Col xs={2}> {/* Col 4 - Saving Throws */}
             <Row>
               <span>{character.stats.savingThrows.wisdomST}</span>
             </Row>
           </Col>
 
-          <Col> {/* Col 5 - Skills (wisdom - animal handling, insight, medicine, perception, survival) */}
+          <Col xs={4}> {/* Col 5 - Skills (wisdom - animal handling, insight, medicine, perception, survival) */}
             <Row>
               <Col>
                 <Row>
-                  <span>Animal Handling:&nbsp;{character.stats.skills.animalHandling}</span>
+                  <span>Animal Handling:&nbsp;&nbsp;{character.stats.skills.animalHandling}</span>
                 </Row>
                 <Row>
-                  <span>Insight:&nbsp;{character.stats.skills.insight}</span>
+                  <span>Insight:&nbsp;&nbsp;{character.stats.skills.insight}</span>
                 </Row>
                 <Row>
-                  <span>Medicine:&nbsp;{character.stats.skills.medicine}</span>
+                  <span>Medicine:&nbsp;&nbsp;{character.stats.skills.medicine}</span>
                 </Row>
                 <Row>
-                  <span>Perception:&nbsp;{character.stats.skills.perception}</span>
+                  <span>Perception:&nbsp;&nbsp;{character.stats.skills.perception}</span>
                 </Row>
                 <Row>
-                  <span>Survival:&nbsp;{character.stats.skills.survival}</span>
+                  <span>Survival:&nbsp;&nbsp;{character.stats.skills.survival}</span>
                 </Row>
               </Col>
             </Row>
@@ -372,24 +360,24 @@ const CharacterScreen = () => {
         </Row> {/* End Row 6 - wisdom */}
 
 {/* ------------------- */}
-        <div class='hr'></div>
-        <br></br>
+        
+        <hr/>
 
         <Row> {/* Row 7 - Charisma */}
 
-          <Col> {/* Col 1 - Stat title */}
+          <Col xs={3}> {/* Col 1 - Stat title */}
             <Row>
               <strong>CHARISMA:</strong>
             </Row>
           </Col>
 
-          <Col> {/* Col 2 - Stats */}
+          <Col xs={1}> {/* Col 2 - Stats */}
             <Row>
               <span>{character.stats.vitals.charisma}</span>
             </Row>
           </Col>
 
-          <Col> {/* Col 3 - Modifiers */}
+          <Col xs={2}> {/* Col 3 - Modifiers */}
             <Row>
               <span>
               ({character.stats.vitals.charismaModifier < 0 ? 
@@ -401,62 +389,72 @@ const CharacterScreen = () => {
             </Row>
           </Col>
 
-          <Col> {/* Col 4 - Saving Throws */}
+          <Col xs={2}> {/* Col 4 - Saving Throws */}
             <Row>
               <span>{character.stats.savingThrows.charismaST}</span>
             </Row>
           </Col>
 
-          <Col> {/* Col 5 - Skills (charisma - deception, intimidation, performance, persuasion) */}
+          <Col xs={4}> {/* Col 5 - Skills (charisma - deception, intimidation, performance, persuasion) */}
             <Row>
               <Col>
                 <Row>
-                  <span>Deception:&nbsp;{character.stats.skills.deception}</span>
+                  <span>Deception:&nbsp;&nbsp;{character.stats.skills.deception}</span>
                 </Row>
                 <Row>
-                  <span>Intimidation:&nbsp;{character.stats.skills.intimidation}</span>
+                  <span>Intimidation:&nbsp;&nbsp;{character.stats.skills.intimidation}</span>
                 </Row>
                 <Row>
-                  <span>Performance:&nbsp;{character.stats.skills.performance}</span>
+                  <span>Performance:&nbsp;&nbsp;{character.stats.skills.performance}</span>
                 </Row>
                 <Row>
-                  <span>Persuasion:&nbsp;{character.stats.skills.persuasion}</span>
+                  <span>Persuasion:&nbsp;&nbsp;{character.stats.skills.persuasion}</span>
                 </Row>
+                <br></br>
               </Col>
             </Row>
           </Col>
         </Row> {/* End Row 7 - charisma */}
-      </div>
-      </Card.Text>
+    </Col>
+
+
+    <Col md={6}>
+
+
+      <br></br>
+
+      <Row><strong>EQUIPMENT:</strong></Row> 
+      <Row><span>{character.stats.equipment.map((p) => " [" + p + "] ")}</span></Row> 
+
+      <br></br>
+      <br></br>
+                
+      <Row><strong>PROFICIENCIES:</strong></Row>
+      <Row>
+        <Col>
+          <Row><span>{character.stats.proficiencies.weaponsProf.map((p) => " [" + p + "] ")}</span></Row>
+          <Row><span>{character.stats.proficiencies.armorProf.map((p) => " [" + p + "] ")}</span></Row>
+          <Row><span>{character.stats.proficiencies.toolProf.map((p) => " [" + p + "] ")}</span></Row>
+        </Col>
+      </Row>
+
+      <br></br>
+      <br></br>
+
+      <Row><strong>LANGUAGES:</strong></Row>
+      <Row><span>{character.stats.proficiencies.languageProf.map((p) => " [" + p + "] ")}</span></Row>
+
+      <br></br>
+      <br></br>
+
+      <Row><strong>FEATURES & TRAITS:</strong></Row>
+      <Row><span>{character.stats.traits.map((p) => " [" + p + "] ")}</span></Row>
+
+      <br></br>
+        
+    </Col>
+    </Row>
     </Card>
-
-{/* ------------------- */}
-
-      <Card>
-        <Row>
-          <Col>
-            <Row><strong>Equipment:</strong></Row>  
-            <Row><span>{character.stats.equipment.map((p) => " [" + p + "] ")}</span></Row> 
-                
-            <br></br>
-                
-            <Row><strong>Proficiencies and Languages:</strong></Row>
-            <Row>
-              <Col>
-                <Row><span>{character.stats.proficiencies.weaponsProf.map((p) => " [" + p + "] ")}</span></Row>
-                <Row><span>{character.stats.proficiencies.armorProf.map((p) => " [" + p + "] ")}</span></Row>
-                <Row><span>{character.stats.proficiencies.toolProf.map((p) => " [" + p + "] ")}</span></Row>
-                <Row><span>{character.stats.proficiencies.languageProf.map((p) => " [" + p + "] ")}</span></Row>
-              </Col>
-            </Row>
-                  
-            <br></br>
-                  
-            <Row><strong>Features and Traits:</strong></Row>
-            <Row><span>{character.stats.traits.map((p) => " [" + p + "] ")}</span></Row>
-          </Col>
-        </Row>
-      </Card>
     </>
   )
 }

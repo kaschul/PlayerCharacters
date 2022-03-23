@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, useParams } from 'react-router-dom'
-import { Row, Col, Image, Card } from 'react-bootstrap'
+import { Row, Col, Image, Card, Container } from 'react-bootstrap'
 import characters from '../characters';
 
 const CharacterScreen = () => {
@@ -14,81 +14,109 @@ const CharacterScreen = () => {
         Go Back
       </Link>
 
+      <Container>
+      <Row xs={1} md={2} className="g-4">  {/* start card grid */}
+      <Col>
+
+
+
+
+{/* NEW CARD */}
       <Card>  {/* Character intro card */}
         <Row>
-          <Col md={6}>
+          <Col>
             <Image src={character.image} alt={character.name} fluid />
           </Col>
-          
+        </Row>
+      </Card>
+
+
+
+
+{/* NEW CARD */}
+
+<Card body>
+        <Row>          
           <Col>
-              <Row>
-                <span><h3>{character.name}</h3> {character.nickname != null && <>(aka {character.nickname})</>}</span>
-              </Row>
-              <br></br>
-              <Row>
-                <span>{character.race} - {character.alignment}</span>
-              </Row>
-              <Row>
-                {/* character subclass only displayed if not null */}
-                <span>Lvl {character.level} {character.class} {character.subclass != null && <>- {character.subclass}</>}</span>
-              </Row>
-              <Row>
-                <span>{character.background}</span>
-              </Row>
-              <br></br>
-              <Row>
-                <p> {character.description} </p>
-              </Row>
+            <Row>  {/* character nickname only displayed if not null */}
+              <span><h3>{character.name}</h3> {character.nickname != null && <>(aka {character.nickname})</>}</span>
+            </Row>
+
+            <br></br>
+
+            <Row>
+              <span>{character.race} - {character.alignment}</span>
+            </Row>
+            <Row>  {/* character subclass only displayed if not null */}
+              <span>Lvl {character.level} {character.class} {character.subclass != null && <>- {character.subclass}</>}</span>
+            </Row>
+            <Row>
+              <span>{character.background}</span>
+            </Row>
+
+            <br></br>
+
+            <Row>
+              <p> {character.description} </p>
+            </Row>
   
-              <Row>  {/* Misc character stats  */}
-                <Col sm={2}></Col>
-                <Col sm={4} class='align-items-center'>
+            <Row>  {/* Misc character stats  */}
+              <Col sm={2}></Col>
+              <Col sm={4} class='align-items-center'>
           
-                  <Row><strong class='text-center'>Armor Class:</strong></Row>
-                  <Row><span class='text-center'>{character.stats.armorClass}</span></Row>
+                <Row><strong class='text-center'>Armor Class:</strong></Row>
+                <Row><span class='text-center'>{character.stats.armorClass}</span></Row>
                
-                  <br></br>
+                <br></br>
 
-                  <Row><strong class='text-center'>Initiative:</strong></Row>
-                  <Row><span class='text-center'>{character.stats.initiative}</span></Row>
+                <Row><strong class='text-center'>Initiative:</strong></Row>
+                <Row><span class='text-center'>{character.stats.initiative}</span></Row>
 
-                  <br></br>
+                <br></br>
 
-                  <Row><strong class='text-center'>Speed:</strong></Row>
-                  <Row><span class='text-center'>{character.stats.speed} ft</span></Row>
+                <Row><strong class='text-center'>Speed:</strong></Row>
+                <Row><span class='text-center'>{character.stats.speed} ft</span></Row>
             
-                </Col>
-                <Col sm={4} class='align-items-center'>
+              </Col>
 
-                  <Row><strong class='text-center'>Hit Points:</strong></Row>
-                  <Row><span class='text-center'>{character.stats.hitPointMax}</span></Row>
+              <Col sm={4} class='align-items-center'>
+
+                <Row><strong class='text-center'>Hit Points:</strong></Row>
+                <Row><span class='text-center'>{character.stats.hitPointMax}</span></Row>
                
-                  <br></br>
+                <br></br>
 
-                  <Row><strong class='text-center'>Proficiency Bonus:</strong></Row>
-                  <Row><span class='text-center'>+ {character.stats.profBonus}</span></Row>
+                <Row><strong class='text-center'>Proficiency Bonus:</strong></Row>
+                <Row><span class='text-center'>+ {character.stats.profBonus}</span></Row>
                   
-                  <br></br>
+                <br></br>
 
-                  <Row><strong class='text-center'>Inspiration:</strong></Row>
-                  <Row><span class='text-center'>{character.inspiration === true ? <div>'YES'</div> : <div>'NO'</div>}</span></Row>
-                </Col>
-                <Col sm={2}></Col>
-              </Row>  {/* end misc character stats  */}
+                <Row><strong class='text-center'>Inspiration:</strong></Row>
+                <Row><span class='text-center'>{character.inspiration === true ? <div>'YES'</div> : <div>'NO'</div>}</span></Row>
+              </Col>
+              <Col sm={2}></Col>
+            </Row>  {/* end misc character stats  */}
           </Col>
         </Row>
       </Card>  {/* End character intro card */}
 
-{/* NEW CARD */}
 
-      <Card>  {/* character stats card */}
-      <Card.Text>
-      <Row>
-      <Col lg={6}>
+
+
+      </Col>
+      <Col>
+
+
+      
+
+{/* NEW CARD */}
+      <Card body>  {/* character stats card */}
+     
+      <Col>
         <Row> {/* Row 1 - Column Titles */}
           <Col xs={2}></Col>
           <Col xs={9}>
-            <strong> STATS&nbsp;&nbsp;-&nbsp;&nbsp;(MODIFIERS)&nbsp;&nbsp;-&nbsp;&nbsp;SAVING THROWS&nbsp;&nbsp;-&nbsp;&nbsp;SKILLS </strong>
+            <strong class='text-nowrap'> STATS&nbsp;&nbsp;-&nbsp;&nbsp;(MODIFIERS)&nbsp;&nbsp;-&nbsp;&nbsp;SAVING THROWS&nbsp;&nbsp;-&nbsp;&nbsp;SKILLS </strong>
           </Col>
         </Row> {/* End Row 1 - Column Titles */}
         <hr/>
@@ -409,53 +437,54 @@ const CharacterScreen = () => {
             </Row>
           </Col>
         </Row> {/* End Row 7 - charisma */}
-    </Col>
-
-
-    <Col lg={6}>
-      <Row>
-      <Col md={1}></Col>
-
-      <Col md={10}>
-      <br></br>
-
-      <Row><strong>EQUIPMENT:</strong></Row> 
-      <Row><span>{character.stats.equipment.map((p) => " [" + p + "] ")}</span></Row> 
-
-      <br></br>
-      <br></br>
-                
-      <Row><strong>PROFICIENCIES:</strong></Row>
-      <Row>
-        <Col>
-          <Row><span>{character.stats.proficiencies.weaponsProf.map((p) => "  [" + p + "]  ")}</span></Row>
-          <Row><span>{character.stats.proficiencies.armorProf.map((p) => "  [" + p + "]  ")}</span></Row>
-          <Row><span>{character.stats.proficiencies.toolProf.map((p) => "  [" + p + "]  ")}</span></Row>
-        </Col>
-      </Row>
-
-      <br></br>
-      <br></br>
-
-      <Row><strong>LANGUAGES:</strong></Row>
-      <Row><span>{character.stats.proficiencies.languageProf.map((p) => "  [" + p + "]  ")}</span></Row>
-
-      <br></br>
-      <br></br>
-
-      <Row><strong>FEATURES & TRAITS:</strong></Row>
-      <Row><span>{character.stats.traits.map((p) => "  [" + p + "]  ")}</span></Row>
-
-      <br></br>
       </Col>
-
-      <Col md={1}></Col>
-      </Row>  
-    </Col>
-    </Row>
-    </Card.Text>
     </Card>
-    </>
+
+
+
+
+{/* NEW CARD */}
+    <Card body>
+      <Col>
+
+        <br></br>
+
+        <Row><strong>EQUIPMENT:</strong></Row> 
+        <Row><span>{character.stats.equipment.map((p) => " [" + p + "] ")}</span></Row> 
+
+        <br></br>
+        <br></br>
+                
+        <Row><strong>PROFICIENCIES:</strong></Row>
+        <Row>
+          <Col>
+            <Row><span>{character.stats.proficiencies.weaponsProf.map((p) => "  [" + p + "]  ")}</span></Row>
+            <Row><span>{character.stats.proficiencies.armorProf.map((p) => "  [" + p + "]  ")}</span></Row>
+            <Row><span>{character.stats.proficiencies.toolProf.map((p) => "  [" + p + "]  ")}</span></Row>
+          </Col>
+        </Row>
+
+        <br></br>
+        <br></br>
+
+        <Row><strong>LANGUAGES:</strong></Row>
+        <Row><span>{character.stats.proficiencies.languageProf.map((p) => "  [" + p + "]  ")}</span></Row>
+
+        <br></br>
+        <br></br>
+
+        <Row><strong>FEATURES & TRAITS:</strong></Row>
+        <Row><span>{character.stats.traits.map((p) => "  [" + p + "]  ")}</span></Row>
+
+        <br></br>
+    
+      </Col> 
+    </Card>
+
+    </Col>  
+    </Row>  {/* end card grid */}
+    </Container>
+  </>
   )
 }
 

@@ -4867,6 +4867,7 @@ fieldset:disabled .btn {
   -ms-flex-direction: column;
   flex-direction: column;
   min-width: 0;
+  max-width: 490 px;
   word-wrap: break-word;
   background-color: #4e5d6c;
   background-clip: border-box;

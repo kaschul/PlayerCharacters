@@ -77,6 +77,7 @@ const CharacterScreen = () => {
                 <Row><strong class='text-center'>Speed:</strong></Row>
                 <Row><span class='text-center'>{character.stats.speed} ft</span></Row>
             
+                <br></br>
               </Col>
 
               <Col sm={4} class='align-items-center'>
@@ -92,7 +93,9 @@ const CharacterScreen = () => {
                 <br></br>
 
                 <Row><strong class='text-center'>Inspiration:</strong></Row>
-                <Row><span class='text-center'>{character.inspiration === true ? <div>'YES'</div> : <div>'NO'</div>}</span></Row>
+                <Row><span class='text-center'>{character.inspiration === true ? <div><i className='fa-solid fa-star'></i></div> : <div><i className='fa-regular fa-star'></i></div>}</span></Row>
+              
+                <br></br>
               </Col>
               <Col sm={2}></Col>
             </Row>  {/* end misc character stats  */}

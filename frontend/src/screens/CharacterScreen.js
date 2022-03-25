@@ -119,7 +119,7 @@ const CharacterScreen = () => {
         <Row> {/* Row 1 - Column Titles */}
           <Col xs={2}></Col>
           <Col xs={9}>
-            <strong class='text-nowrap'> STATS&nbsp;&nbsp;-&nbsp;&nbsp;(MODIFIERS)&nbsp;&nbsp;-&nbsp;&nbsp;SAVING THROWS&nbsp;&nbsp;-&nbsp;&nbsp;SKILLS </strong>
+            <strong className='text-nowrap d-none d-xl-inline-block'> STATS&nbsp;&nbsp;-&nbsp;&nbsp;(MODIFIERS)&nbsp;&nbsp;-&nbsp;&nbsp;SAVING THROWS&nbsp;&nbsp;-&nbsp;&nbsp;SKILLS </strong>
           </Col>
         </Row> {/* End Row 1 - Column Titles */}
         <hr/>
@@ -130,19 +130,20 @@ const CharacterScreen = () => {
 
           <Col xs={3}> {/* Col 1 - Stat title */}
             <Row>
-              <strong class='text-nowrap'><i class='fa-solid fa-weight-hanging'></i> STRENGTH:</strong>
+              <strong className='text-nowrap'><i className='fa-solid fa-weight-hanging'></i> 
+              <span className='d-none d-xl-inline-block'>STRENGTH:</span></strong>
             </Row>
           </Col>
 
           <Col xs={1}> {/* Col 2 - Stats */}
             <Row>
-              <span class='text-nowrap'>{character.stats.vitals.strength}</span>
+              <span className='text-nowrap'>{character.stats.vitals.strength}</span>
             </Row>
           </Col>
 
           <Col xs={2}> {/* Col 3 - Modifiers */}
             <Row>
-              <span>
+              <span className='text-nowrap'>
               ({character.stats.vitals.strengthModifier < 0 ? 
                 <> - {Math.abs(character.stats.vitals.strengthModifier)} </> :
                 character.stats.vitals.strengthModifier > 0 ?
@@ -160,7 +161,9 @@ const CharacterScreen = () => {
           
           <Col xs={4}> {/* Col 5 - Skills (strength - athletics) */}
             <Row>
-              <span><i className='fa-solid fa-person-hiking'></i> Athletics:&nbsp;&nbsp;{character.stats.skills.athletics}</span>
+              <span><i className='fa-solid fa-person-hiking'></i> 
+              <span className='d-none d-xl-inline-block'>Athletics:</span>
+              &nbsp;&nbsp;{character.stats.skills.athletics}</span>
             </Row>
           </Col>
 
@@ -174,19 +177,20 @@ const CharacterScreen = () => {
 
           <Col xs={3}> {/* Col 1 - Stat title */}
             <Row>
-              <strong class='text-nowrap'><i className='fa-solid fa-feather-pointed'></i> DEXTERITY:</strong>
+              <strong className='text-nowrap'><i className='fa-solid fa-feather-pointed'></i> 
+              <span className='d-none d-xl-inline-block'>DEXTERITY:</span></strong>
             </Row>
           </Col>
 
           <Col xs={1}> {/* Col 2 - Stats */}
             <Row>
-              <span class='text-nowrap'>{character.stats.vitals.dexterity}</span>
+              <span className='text-nowrap'>{character.stats.vitals.dexterity}</span>
             </Row>
           </Col>
 
           <Col xs={2}> {/* Col 3 - Modifiers */}
             <Row>
-              <span>
+              <span className='text-nowrap'>
               ({character.stats.vitals.dexModifier < 0 ? 
                 <> - {Math.abs(character.stats.vitals.dexModifier)} </> :
                 character.stats.vitals.dexModifier > 0 ?
@@ -206,13 +210,19 @@ const CharacterScreen = () => {
             <Row>
               <Col>
                 <Row>
-                  <span><i className='fa-solid fa-person-running'></i> Acrobatics:&nbsp;&nbsp;{character.stats.skills.acrobatics}</span>
+                  <span><i className='fa-solid fa-person-running'></i> 
+                  <span className='d-none d-xl-inline-block'>Acrobatics:</span>
+                  &nbsp;&nbsp;{character.stats.skills.acrobatics}</span>
                 </Row>
                 <Row>
-                  <span><i className='fa-solid fa-hand'></i> Slight of Hand:&nbsp;&nbsp;{character.stats.skills.slightOfHand}</span>
+                  <span><i className='fa-solid fa-hand'></i> 
+                  <span className='d-none d-xl-inline-block'>Slight of Hand:</span>
+                  &nbsp;&nbsp;{character.stats.skills.slightOfHand}</span>
                 </Row>
                 <Row>
-                  <span><i className='fa-solid fa-eye-slash'></i> Stealth:&nbsp;&nbsp;{character.stats.skills.stealth}</span>
+                  <span><i className='fa-solid fa-eye-slash'></i> 
+                  <span className='d-none d-xl-inline-block'>Stealth:</span>
+                  &nbsp;&nbsp;{character.stats.skills.stealth}</span>
                 </Row>
               </Col>
             </Row>
@@ -228,19 +238,20 @@ const CharacterScreen = () => {
 
           <Col xs={3}> {/* Col 1 - Stat title */}
             <Row>
-              <strong class='text-nowrap'><i className='fa-solid fa-heart-pulse'></i> CONSTITUTION:</strong>
+              <strong className='text-nowrap'><i className='fa-solid fa-heart-pulse'></i> 
+              <span className='d-none d-xl-inline-block'>CONSTITUTION:</span></strong>
             </Row>
           </Col>
 
           <Col xs={1}> {/* Col 2 - Stats */}
             <Row>
-              <span class='text-nowrap'>{character.stats.vitals.constitution}</span>
+              <span className='text-nowrap'>{character.stats.vitals.constitution}</span>
             </Row>
           </Col>
 
           <Col xs={2}> {/* Col 3 - Modifiers */}
             <Row>
-              <span>
+              <span className='text-nowrap'>
               ({character.stats.vitals.constModifier < 0 ? 
                 <> - {Math.abs(character.stats.vitals.constModifier)} </> :
                 character.stats.vitals.constModifier > 0 ?
@@ -272,19 +283,20 @@ const CharacterScreen = () => {
 
           <Col xs={3}> {/* Col 1 - Stat title */}
             <Row>
-              <strong class='text-nowrap'><i className='fa-solid fa-brain'></i> INTELLIGENCE:</strong>
+              <strong className='text-nowrap'><i className='fa-solid fa-brain'></i> 
+              <span className='d-none d-xl-inline-block'>INTELLIGENCE:</span></strong>
             </Row>
           </Col>
 
           <Col xs={1}> {/* Col 2 - Stats */}
             <Row>
-              <span class='text-nowrap'>{character.stats.vitals.intelligence}</span>
+              <span className='text-nowrap'>{character.stats.vitals.intelligence}</span>
             </Row>
           </Col>
 
           <Col xs={2}> {/* Col 3 - Modifiers */}
             <Row>
-              <span>
+              <span className='text-nowrap'>
               ({character.stats.vitals.intelModifier < 0 ? 
                 <> - {Math.abs(character.stats.vitals.intelModifier)} </> :
                 character.stats.vitals.intelModifier > 0 ?
@@ -304,19 +316,29 @@ const CharacterScreen = () => {
             <Row>
               <Col>
                 <Row>
-                  <span><i className='fa-solid fa-wand-magic-sparkles'></i> Arcana:&nbsp;&nbsp;{character.stats.skills.arcana}</span>
+                  <span><i className='fa-solid fa-wand-magic-sparkles'></i> 
+                  <span className='d-none d-xl-inline-block'>Arcana:</span>
+                  &nbsp;&nbsp;{character.stats.skills.arcana}</span>
                 </Row>
                 <Row>
-                  <span><i className='fa-solid fa-bone'></i> History:&nbsp;&nbsp;{character.stats.skills.history}</span>
+                  <span><i className='fa-solid fa-bone'></i> 
+                  <span className='d-none d-xl-inline-block'>History:</span>
+                  &nbsp;&nbsp;{character.stats.skills.history}</span>
                 </Row>
                 <Row>
-                  <span><i className='fa-solid fa-magnifying-glass'> </i> Investigation:&nbsp;&nbsp;{character.stats.skills.investigation}</span>
+                  <span><i className='fa-solid fa-magnifying-glass'></i> 
+                  <span className='d-none d-xl-inline-block'>Investigation:</span>
+                  &nbsp;&nbsp;{character.stats.skills.investigation}</span>
                 </Row>
                 <Row>
-                  <span><i className='fa-solid fa-seedling'></i> Nature:&nbsp;&nbsp;{character.stats.skills.nature}</span>
+                  <span><i className='fa-solid fa-seedling'></i> 
+                  <span className='d-none d-xl-inline-block'>Nature:</span>
+                  &nbsp;&nbsp;{character.stats.skills.nature}</span>
                 </Row>
                 <Row>
-                  <span><i className='fa-solid fa-hands-praying'></i> Religion:&nbsp;&nbsp;{character.stats.skills.religion}</span>
+                  <span><i className='fa-solid fa-hands-praying'></i> 
+                  <span className='d-none d-xl-inline-block'>Religion:</span>
+                  &nbsp;&nbsp;{character.stats.skills.religion}</span>
                 </Row>
               </Col>
             </Row>
@@ -332,19 +354,20 @@ const CharacterScreen = () => {
 
           <Col xs={3}> {/* Col 1 - Stat title */}
             <Row>
-              <strong class='text-nowrap'><i className='fa-solid fa-chess'></i> WISDOM:</strong>
+              <strong className='text-nowrap'><i className='fa-solid fa-chess'></i> 
+              <span className='d-none d-xl-inline-block'>WISDOM:</span></strong>
             </Row>
           </Col>
 
           <Col xs={1}> {/* Col 2 - Stats */}
             <Row>
-              <span class='text-nowrap'>{character.stats.vitals.wisdom}</span>
+              <span className='text-nowrap'>{character.stats.vitals.wisdom}</span>
             </Row>
           </Col>
 
           <Col xs={2}> {/* Col 3 - Modifiers */}
             <Row>
-              <span>
+              <span className='text-nowrap'>
               ({character.stats.vitals.wisdomModifier < 0 ? 
                 <> - {Math.abs(character.stats.vitals.wisdomModifier)} </> :
                 character.stats.vitals.wisdomModifier > 0 ?
@@ -364,19 +387,29 @@ const CharacterScreen = () => {
             <Row>
               <Col>
                 <Row>
-                  <span><i class='fa-solid fa-crow'></i> Animal Handling:&nbsp;&nbsp;{character.stats.skills.animalHandling}</span>
+                  <span><i className='fa-solid fa-crow'></i> 
+                  <span className='d-none d-xl-inline-block'>Animal Handling:</span>
+                  &nbsp;&nbsp;{character.stats.skills.animalHandling}</span>
                 </Row>
                 <Row>
-                  <span><i class='fa-regular fa-lightbulb'></i> Insight:&nbsp;&nbsp;{character.stats.skills.insight}</span>
+                  <span><i className='fa-regular fa-lightbulb'></i> 
+                  <span className='d-none d-xl-inline-block'>Insight:</span>
+                  &nbsp;&nbsp;{character.stats.skills.insight}</span>
                 </Row>
                 <Row>
-                  <span><i className='fa-solid fa-prescription'></i> Medicine:&nbsp;&nbsp;{character.stats.skills.medicine}</span>
+                  <span><i className='fa-solid fa-prescription'></i> 
+                  <span className='d-none d-xl-inline-block'>Medicine:</span>
+                  &nbsp;&nbsp;{character.stats.skills.medicine}</span>
                 </Row>
                 <Row>
-                  <span><i className='fa-solid fa-binoculars'></i> Perception:&nbsp;&nbsp;{character.stats.skills.perception}</span>
+                  <span><i className='fa-solid fa-binoculars'></i> 
+                  <span className='d-none d-xl-inline-block'>Perception:</span>
+                  &nbsp;&nbsp;{character.stats.skills.perception}</span>
                 </Row>
                 <Row>
-                  <span><i className='fa-solid fa-campground'></i> Survival:&nbsp;&nbsp;{character.stats.skills.survival}</span>
+                  <span><i className='fa-solid fa-campground'></i> 
+                  <span className='d-none d-xl-inline-block'>Survival:</span>
+                  &nbsp;&nbsp;{character.stats.skills.survival}</span>
                 </Row>
               </Col>
             </Row>
@@ -392,19 +425,20 @@ const CharacterScreen = () => {
 
           <Col xs={3}> {/* Col 1 - Stat title */}
             <Row>
-              <strong class='text-nowrap'><i className='fa-solid fa-users'></i> CHARISMA:</strong>
+              <strong className='text-nowrap'><i className='fa-solid fa-users'></i> 
+              <span className='d-none d-xl-inline-block'>CHARISMA:</span></strong>
             </Row>
           </Col>
 
           <Col xs={1}> {/* Col 2 - Stats */}
             <Row>
-              <span class='text-nowrap'>{character.stats.vitals.charisma}</span>
+              <span className='text-nowrap'>{character.stats.vitals.charisma}</span>
             </Row>
           </Col>
 
           <Col xs={2}> {/* Col 3 - Modifiers */}
             <Row>
-              <span>
+              <span className='text-nowrap'>
               ({character.stats.vitals.charismaModifier < 0 ? 
                 <> - {Math.abs(character.stats.vitals.charismaModifier)} </> :
                 character.stats.vitals.charismaModifier > 0 ?
@@ -424,16 +458,24 @@ const CharacterScreen = () => {
             <Row>
               <Col>
                 <Row>
-                  <span><i className='fa-solid fa-mask'></i> Deception:&nbsp;&nbsp;{character.stats.skills.deception}</span>
+                  <span><i className='fa-solid fa-mask'></i> 
+                  <span className='d-none d-xl-inline-block'>Deception:</span>
+                  &nbsp;&nbsp;{character.stats.skills.deception}</span>
                 </Row>
                 <Row>
-                  <span><i className='fa-solid fa-gun'></i> Intimidation:&nbsp;&nbsp;{character.stats.skills.intimidation}</span>
+                  <span><i className='fa-solid fa-gun'></i> 
+                  <span className='d-none d-xl-inline-block'>Intimidation:</span>
+                  &nbsp;&nbsp;{character.stats.skills.intimidation}</span>
                 </Row>
                 <Row>
-                  <span><i className='fa-solid fa-masks-theater'></i> Performance:&nbsp;&nbsp;{character.stats.skills.performance}</span>
+                  <span><i className='fa-solid fa-masks-theater'></i> 
+                  <span className='d-none d-xl-inline-block'>Performance:</span>
+                  &nbsp;&nbsp;{character.stats.skills.performance}</span>
                 </Row>
                 <Row>
-                  <span><i className='fa-solid fa-comments'></i> Persuasion:&nbsp;&nbsp;{character.stats.skills.persuasion}</span>
+                  <span><i className='fa-solid fa-comments'></i> 
+                  <span className='d-none d-xl-inline-block'>Persuasion:</span>
+                  &nbsp;&nbsp;{character.stats.skills.persuasion}</span>
                 </Row>
                 <br></br>
               </Col>
@@ -452,13 +494,19 @@ const CharacterScreen = () => {
 
         <br></br>
 
-        <Row><strong><i className='fa-solid fa-suitcase'></i> EQUIPMENT:</strong></Row> 
+        <Row>
+          <strong><i className='fa-solid fa-suitcase'></i> 
+          <span className='d-none d-lg-inline-block'>EQUIPMENT:</span></strong>
+        </Row> 
         <Row><span>{character.stats.equipment.map((p) => " [" + p + "] ")}</span></Row> 
 
         <br></br>
         <br></br>
                 
-        <Row><strong><i className='fa-solid fa-graduation-cap'></i> PROFICIENCIES:</strong></Row>
+        <Row>
+          <strong><i className='fa-solid fa-graduation-cap'></i> 
+          <span className='d-none d-lg-inline-block'>PROFICIENCIES:</span></strong>
+        </Row>
         <Row>
           <Col>
             <Row><span>{character.stats.proficiencies.weaponsProf.map((p) => "  [" + p + "]  ")}</span></Row>
@@ -470,13 +518,19 @@ const CharacterScreen = () => {
         <br></br>
         <br></br>
 
-        <Row><strong><i className='fa-solid fa-comment'></i> LANGUAGES:</strong></Row>
+        <Row>
+          <strong><i className='fa-solid fa-comment'></i> 
+          <span className='d-none d-lg-inline-block'>LANGUAGES:</span></strong>
+        </Row>
         <Row><span>{character.stats.proficiencies.languageProf.map((p) => "  [" + p + "]  ")}</span></Row>
 
         <br></br>
         <br></br>
 
-        <Row><strong><i className='fa-solid fa-dna'></i> FEATURES & TRAITS:</strong></Row>
+        <Row>
+          <strong><i className='fa-solid fa-dna'></i> 
+          <span className='d-none d-lg-inline-block'>FEATURES & TRAITS:</span></strong>
+        </Row>
         <Row><span>{character.stats.traits.map((p) => "  [" + p + "]  ")}</span></Row>
 
         <br></br>

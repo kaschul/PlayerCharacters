@@ -3,6 +3,7 @@ const characters = [
         _id: '1',
         image: '/images/mindartis.jpg',
         name: 'Mindartis Liadon',
+        firstname: 'Mindartis',
         nickname: 'Mindy',
         race: 'high elf',
         class: 'barbarian',
@@ -71,24 +72,24 @@ const characters = [
         },
         relationships: {
             relationship1: {
-                status: false,
-                type: '',
-                name: ''
+                status: true,
+                type: 'Parent',
+                name: 'Theirastra'
             },
             relationship2: {
-                status: false,
-                type: '',
-                name: ''
+                status: true,
+                type: 'Parent',
+                name: 'Leondartis'
             },
             relationship3: {
-                status: false,
-                type: '',
-                name: ''
+                status: true,
+                type: 'Pibling',
+                name: 'Leyandra'
             },
             relationship4: {
-                status: false,
-                type: '',
-                name: ''
+                status: true,
+                type: 'Cousin',
+                name: 'Enna'
             }
         }
     },
@@ -97,6 +98,7 @@ const characters = [
         _id: '2',
         image: '/images/enna.jpg',
         name: 'Enna Xiloscient',
+        firstname: 'Enna',
         nickname: null,
         race: 'high elf',
         class: 'wizard',
@@ -165,24 +167,24 @@ const characters = [
         },
         relationships: {
             relationship1: {
-                status: false,
-                type: '',
-                name: ''
+                status: true,
+                type: 'Parent',
+                name: 'Erdan'
             },
             relationship2: {
-                status: false,
-                type: '',
-                name: ''
+                status: true,
+                type: 'Parent',
+                name: 'Leyandra'
             },
             relationship3: {
-                status: false,
-                type: '',
-                name: ''
+                status: true,
+                type: 'Pibling',
+                name: 'Leondartis'
             },
             relationship4: {
-                status: false,
-                type: '',
-                name: ''
+                status: true,
+                type: 'Cousin',
+                name: 'Mindartis'
             }
         }
     },
@@ -191,6 +193,7 @@ const characters = [
         _id: '3',
         image: '/images/lark.jpg',
         name: 'Lark',
+        firstname: 'Lark',
         nickname: null,
         race: 'air genasi',
         class: 'rogue',
@@ -285,6 +288,7 @@ const characters = [
         _id: '4',
         image: '/images/willow.jpg',
         name: 'Willow',
+        firstname: 'Willow',
         nickname: null,
         race: 'wood elf',
         class: 'druid',
@@ -379,6 +383,7 @@ const characters = [
         _id: '5',
         image: '/images/merit.jpg',
         name: 'Merit',
+        firstname: 'Merit',
         nickname: 'Merry',
         race: 'tiefling',
         class: 'warlock',
@@ -472,8 +477,9 @@ const characters = [
     {
         _id: '6',
         image: '/images/thokk.jpg',
-        name: 'Thokk',
-        nickname: null,
+        name: 'Thokk Hullbreak',
+        firstname: 'Thokk',
+        nickname: 'The Dread Pirate Thokk',
         race: 'half-orc',
         class: 'barbarian',
         subclass: null,
@@ -541,14 +547,14 @@ const characters = [
         },
         relationships: {
             relationship1: {
-                status: false,
-                type: '',
-                name: ''
+                status: true,
+                type: 'Parent',
+                name: 'Krusk'
             },
             relationship2: {
-                status: false,
-                type: '',
-                name: ''
+                status: true,
+                type: 'Cousin',
+                name: 'Sutha'
             },
             relationship3: {
                 status: false,
@@ -567,7 +573,8 @@ const characters = [
         _id: '7',
         image: '/images/rex.jpg',
         name: 'Rex',
-        nickname: null,
+        firstname: 'Rex',
+        nickname: 'Prince of the Western Wilds',
         race: 'human',
         class: '',
         subclass: '',
@@ -635,14 +642,14 @@ const characters = [
         },
         relationships: {
             relationship1: {
-                status: false,
-                type: '',
-                name: ''
+                status: true,
+                type: 'Parent',
+                name: 'Malik'
             },
             relationship2: {
-                status: false,
-                type: '',
-                name: ''
+                status: true,
+                type: 'Sibling',
+                name: 'Reigna'
             },
             relationship3: {
                 status: false,
@@ -661,7 +668,8 @@ const characters = [
         _id: '8',
         image: '/images/reigna.jpg',
         name: 'Reigna',
-        nickname: null,
+        firstname: 'Reigna',
+        nickname: 'Princess of the Western Wilds',
         race: 'human',
         class: '',
         subclass: '',
@@ -729,19 +737,19 @@ const characters = [
         },
         relationships: {
             relationship1: {
-                status: false,
-                type: '',
-                name: ''
+                status: true,
+                type: 'Parent',
+                name: 'Malik'
             },
             relationship2: {
-                status: false,
-                type: '',
-                name: ''
+                status: true,
+                type: 'Sibling',
+                name: 'Rex'
             },
             relationship3: {
-                status: false,
-                type: '',
-                name: ''
+                status: true,
+                type: 'Partner',
+                name: 'Aimi'
             },
             relationship4: {
                 status: false,
@@ -755,6 +763,7 @@ const characters = [
         _id: '9',
         image: '/images/lux.jpg',
         name: 'Lux',
+        firstname: 'Lux',
         nickname: null,
         race: 'changeling',
         class: '',
@@ -849,6 +858,7 @@ const characters = [
         _id: '10',
         image: '/images/clover.jpg',
         name: 'Clover Fleetfoot',
+        firstname: 'Clover',
         nickname: null,
         race: 'halfling',
         class: '',
@@ -917,9 +927,9 @@ const characters = [
         },
         relationships: {
             relationship1: {
-                status: false,
-                type: '',
-                name: ''
+                status: true,
+                type: 'Sibling',
+                name: 'Felix'
             },
             relationship2: {
                 status: false,
@@ -943,7 +953,8 @@ const characters = [
         _id: '11',
         image: 'images/thia.jpg',
         name: 'Thia',
-        nickname: '',
+        firstname: 'Thia',
+        nickname: null,
         race: 'high elf',
         class: 'cleric',
         subclass: 'life domain',
@@ -1037,6 +1048,7 @@ const characters = [
         _id: '12',
         image: '/images/unitLVI.jpg',
         name: 'unit LVI',
+        firstname: 'Levi',
         nickname: 'Levi',
         race: 'warforged',
         class: 'fighter',
@@ -1105,9 +1117,9 @@ const characters = [
         },
         relationships: {
             relationship1: {
-                status: false,
-                type: '',
-                name: ''
+                status: true,
+                type: 'Forgemate',
+                name: 'Lex'
             },
             relationship2: {
                 status: false,

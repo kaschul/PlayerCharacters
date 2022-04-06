@@ -1,21 +1,44 @@
-import React from 'react'
-import { Row, Col } from 'react-bootstrap'
-import characters from '../characters'
-import Character from '../components/Character'
+import React from "react";
+import { Card, Row, Col, ListGroup, ListGroupItem, Button } from 'react-bootstrap'
+import { useNavigate } from "react-router-dom";
 
 const HomeScreen = () => {
-  return (
-    <>
-        <h1>The Crew</h1>
-        <Row>
-            {characters.map((character) => (
-                <Col sm={12} md={6} lg={4} xl={3}>
-                    <Character character={character} />
-                </Col>
-            ))}
-        </Row>
-    </>
-  )
+
+    const navigate = useNavigate()
+    const goToPCs = () => {
+        navigate('/characters')
+    }
+    const goToNPCs = () => {
+        navigate('/npcs')
+    }
+
+    return(
+        <>
+            <Card>
+                <Row>
+                    <Col>
+                        <Button
+                            className='btn-block btn-dark my-3'
+                            type='button'
+                            onClick={goToPCs}
+                        >
+                            The Cast
+                        </Button>
+                    </Col>
+                    <Col>
+                       <Button
+                            className='btn-block btn-dark my-3'
+                            type='button'
+                            onClick={goToNPCs}
+                        >
+                            The Crew
+                        </Button>
+                    </Col>
+                </Row>
+            </Card>
+        </>
+    )
+
 }
 
 export default HomeScreen

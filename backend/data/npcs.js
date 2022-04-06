@@ -70,10 +70,26 @@ const npcs = [
             equipment: []
         },
         relationships: {
-            status: true,
-            type: 'mother of',
-            relationship: 'Mindartis',
-            relationship2: 'Leondartis\' wife and Enna\'s aunt'
+            relationship1: {
+                status: true,
+                type: 'Child',
+                name: 'Mindartis'
+            },
+            relationship2: {
+                status: true,
+                type: 'Spouse',
+                name: 'Leondartis'
+            },
+            relationship3: {
+                status: true,
+                type: 'Nibling',
+                name: 'Enna'
+            },
+            relationship4: {
+                status: false,
+                type: '',
+                name: ''
+            }
         }
     },
 
@@ -148,10 +164,26 @@ const npcs = [
             equipment: []
         },
         relationships: {
-            status: true,
-            type: 'father of',
-            relationship: 'Mindartis',
-            relationship2: 'Leyandra\'s brother and Enna\'s uncle'
+            relationship1: {
+                status: true,
+                type: 'Child',
+                name: 'Mindartis'
+            },
+            relationship2: {
+                status: true,
+                type: 'Spouse',
+                name: 'Theirastra'
+            },
+            relationship3: {
+                status: true,
+                type: 'Sibling',
+                name: 'Leyandra'
+            },
+            relationship4: {
+                status: true,
+                type: 'Nibling',
+                name: 'Enna'
+            }
         }
     },
 
@@ -226,10 +258,26 @@ const npcs = [
             equipment: []
         },
         relationships: {
-            status: true,
-            type: 'mother of',
-            relationship: 'Enna',
-            relationship2: 'Erdan\'s wife, Leondartis\' sister, and Mindartis\' aunt'
+            relationship1: {
+                status: true,
+                type: 'Child',
+                name: 'Enna'
+            },
+            relationship2: {
+                status: true,
+                type: 'Spouse',
+                name: 'Erdan'
+            },
+            relationship3: {
+                status: true,
+                type: 'Sibling',
+                name: 'Leondartis'
+            },
+            relationship4: {
+                status: true,
+                type: 'Nibling',
+                name: 'Mindartis'
+            }
         }
     },
 
@@ -304,10 +352,26 @@ const npcs = [
             equipment: []
         },
         relationships: {
-            status: true,
-            type: 'father of',
-            relationship: 'Enna',
-            relationship2: 'Leyandra\'s husband and Mindartis\' uncle'
+            relationship1: {
+                status: true,
+                type: 'Child',
+                name: 'Enna'
+            },
+            relationship2: {
+                status: true,
+                type: 'Spouse',
+                name: 'Leyandra'
+            },
+            relationship3: {
+                status: true,
+                type: 'Nibling',
+                name: 'Mindartis'
+            },
+            relationship4: {
+                status: false,
+                type: '',
+                name: ''
+            }
         }
     },
 
@@ -382,10 +446,26 @@ const npcs = [
             equipment: []
         },
         relationships: {
-            status: false,
-            type: null,
-            relationship: null,
-            relationship2: null
+            relationship1: {
+                status: false,
+                type: '',
+                name: ''
+            },
+            relationship2: {
+                status: false,
+                type: '',
+                name: ''
+            },
+            relationship3: {
+                status: false,
+                type: '',
+                name: ''
+            },
+            relationship4: {
+                status: false,
+                type: '',
+                name: ''
+            }
         }
     },
 
@@ -460,10 +540,26 @@ const npcs = [
             equipment: []
         },
         relationships: {
-            status: true,
-            type: 'father of',
-            relationship: 'Rex & Reigna',
-            relationship2: null
+            relationship1: {
+                status: true,
+                type: 'Child',
+                name: 'Reigna'
+            },
+            relationship2: {
+                status: true,
+                type: 'Child',
+                name: 'Rex'
+            },
+            relationship3: {
+                status: false,
+                type: '',
+                name: ''
+            },
+            relationship4: {
+                status: false,
+                type: '',
+                name: ''
+            }
         }
     },
 
@@ -538,10 +634,26 @@ const npcs = [
             equipment: []
         },
         relationships: {
-            status: false,
-            type: '',
-            relationship: '',
-            relationship2: ''
+            relationship1: {
+                status: false,
+                type: '',
+                name: ''
+            },
+            relationship2: {
+                status: false,
+                type: '',
+                name: ''
+            },
+            relationship3: {
+                status: false,
+                type: '',
+                name: ''
+            },
+            relationship4: {
+                status: false,
+                type: '',
+                name: ''
+            }
         }
     },
 
@@ -616,10 +728,26 @@ const npcs = [
             equipment: []
         },
         relationships: {
-            status: true,
-            type: 'engaged to',
-            relationship: 'Reigna',
-            relationship2: ''
+            relationship1: {
+                status: true,
+                type: 'Partner',
+                name: 'Reigna'
+            },
+            relationship2: {
+                status: false,
+                type: '',
+                name: ''
+            },
+            relationship3: {
+                status: false,
+                type: '',
+                name: ''
+            },
+            relationship4: {
+                status: false,
+                type: '',
+                name: ''
+            }
         }
     },
 
@@ -695,10 +823,26 @@ const npcs = [
             equipment: []
         },
         relationships: {
-            status: true,
-            type: 'cousin of',
-            relationship: 'Thokk',
-            relationship2: 'Krusk\'s niece'
+            relationship1: {
+                status: true,
+                type: 'Cousin',
+                name: 'Thokk'
+            },
+            relationship2: {
+                status: true,
+                type: 'Pibling',
+                name: 'Krusk'
+            },
+            relationship3: {
+                status: false,
+                type: '',
+                name: ''
+            },
+            relationship4: {
+                status: false,
+                type: '',
+                name: ''
+            }
         }
     },
 
@@ -773,10 +917,26 @@ const npcs = [
             equipment: []
         },
         relationships: {
-            status: true,
-            type: 'father of',
-            relationship: 'Thokk',
-            relationship2: ''
+            relationship1: {
+                status: true,
+                type: 'Child',
+                name: 'Thokk'
+            },
+            relationship2: {
+                status: true,
+                type: 'Nibling',
+                name: 'Sutha'
+            },
+            relationship3: {
+                status: false,
+                type: '',
+                name: ''
+            },
+            relationship4: {
+                status: false,
+                type: '',
+                name: ''
+            }
         }
     },
 
@@ -851,10 +1011,26 @@ const npcs = [
             equipment: []
         },
         relationships: {
-            status: true,
-            type: 'brother of',
-            relationship: 'Clover',
-            relationship2: ''
+            relationship1: {
+                status: true,
+                type: 'Sibling',
+                name: 'Clover'
+            },
+            relationship2: {
+                status: false,
+                type: '',
+                name: ''
+            },
+            relationship3: {
+                status: false,
+                type: '',
+                name: ''
+            },
+            relationship4: {
+                status: false,
+                type: '',
+                name: ''
+            }
         }
     },
 
@@ -929,10 +1105,26 @@ const npcs = [
             equipment: []
         },
         relationships: {
-            status: false,
-            type: '',
-            relationship: '',
-            relationship2: ''
+            relationship1: {
+                status: false,
+                type: '',
+                name: ''
+            },
+            relationship2: {
+                status: false,
+                type: '',
+                name: ''
+            },
+            relationship3: {
+                status: false,
+                type: '',
+                name: ''
+            },
+            relationship4: {
+                status: false,
+                type: '',
+                name: ''
+            }
         }
     },
 
@@ -1009,10 +1201,26 @@ const npcs = [
             equipment: []
         },
         relationships: {
-            status: false,
-            type: '',
-            relationship: '',
-            relationship2: ''
+            relationship1: {
+                status: false,
+                type: '',
+                name: ''
+            },
+            relationship2: {
+                status: false,
+                type: '',
+                name: ''
+            },
+            relationship3: {
+                status: false,
+                type: '',
+                name: ''
+            },
+            relationship4: {
+                status: false,
+                type: '',
+                name: ''
+            }
         }
     },
 
@@ -1088,10 +1296,26 @@ const npcs = [
             equipment: []
         },
         relationships: {
-            status: false,
-            type: '',
-            relationship: '',
-            relationship2: ''
+            relationship1: {
+                status: false,
+                type: '',
+                name: ''
+            },
+            relationship2: {
+                status: false,
+                type: '',
+                name: ''
+            },
+            relationship3: {
+                status: false,
+                type: '',
+                name: ''
+            },
+            relationship4: {
+                status: false,
+                type: '',
+                name: ''
+            }
         }
     },
 
@@ -1166,10 +1390,26 @@ const npcs = [
             equipment: []
         },
         relationships: {
-            status: false,
-            type: '',
-            relationship: '',
-            relationship2: ''
+            relationship1: {
+                status: false,
+                type: '',
+                name: ''
+            },
+            relationship2: {
+                status: false,
+                type: '',
+                name: ''
+            },
+            relationship3: {
+                status: false,
+                type: '',
+                name: ''
+            },
+            relationship4: {
+                status: false,
+                type: '',
+                name: ''
+            }
         }
     },
 
@@ -1244,10 +1484,26 @@ const npcs = [
             equipment: []
         },
         relationships: {
-            status: false,
-            type: '',
-            relationship: '',
-            relationship2: ''
+            relationship1: {
+                status: false,
+                type: '',
+                name: ''
+            },
+            relationship2: {
+                status: false,
+                type: '',
+                name: ''
+            },
+            relationship3: {
+                status: false,
+                type: '',
+                name: ''
+            },
+            relationship4: {
+                status: false,
+                type: '',
+                name: ''
+            }
         }
     }
 
@@ -1332,11 +1588,28 @@ export default npcs
             equipment: []
         },
         relationships: {
-            status: false,
-            type: '',
-            relationship: '',
-            relationship2: ''
+            relationship1: {
+                status: false,
+                type: '',
+                name: ''
+            },
+            relationship2: {
+                status: false,
+                type: '',
+                name: ''
+            },
+            relationship3: {
+                status: false,
+                type: '',
+                name: ''
+            },
+            relationship4: {
+                status: false,
+                type: '',
+                name: ''
+            }
         }
     }
+        
 
     */

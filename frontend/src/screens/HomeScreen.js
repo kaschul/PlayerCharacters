@@ -16,19 +16,21 @@ const HomeScreen = () => {
         <>
             <Card>
                 <Row>
-                    <Col>
+                    <Col className='text-center'>
                         <Button
                             className='btn-block btn-dark my-3'
                             type='button'
+                            size='lg'
                             onClick={goToPCs}
                         >
                             The Cast
                         </Button>
                     </Col>
-                    <Col>
+                    <Col className='text-center'>
                        <Button
                             className='btn-block btn-dark my-3'
                             type='button'
+                            size='lg'
                             onClick={goToNPCs}
                         >
                             The Crew

@@ -68,6 +68,28 @@ const characters = [
             },
             traits: ['darkvision', 'fey ancestry', 'trance', 'unarmored defense', 'rage', 'reckless attack', 'danger sense', 'eagle totem'],
             equipment: ['javelin x4', 'longsword', 'shortbow']
+        },
+        relationships: {
+            relationship1: {
+                status: false,
+                type: '',
+                name: ''
+            },
+            relationship2: {
+                status: false,
+                type: '',
+                name: ''
+            },
+            relationship3: {
+                status: false,
+                type: '',
+                name: ''
+            },
+            relationship4: {
+                status: false,
+                type: '',
+                name: ''
+            }
         }
     },
 
@@ -140,6 +162,28 @@ const characters = [
             },
             traits: ['darkvision', 'keen senses', 'fey ancestry', 'trance'],
             equipment: ['Helm of Comprehending Languages', 'quarterstaff', 'shortsword']
+        },
+        relationships: {
+            relationship1: {
+                status: false,
+                type: '',
+                name: ''
+            },
+            relationship2: {
+                status: false,
+                type: '',
+                name: ''
+            },
+            relationship3: {
+                status: false,
+                type: '',
+                name: ''
+            },
+            relationship4: {
+                status: false,
+                type: '',
+                name: ''
+            }
         }
     },
 
@@ -212,6 +256,28 @@ const characters = [
             },
             traits: ['unending breath', 'mingle with the wind', 'sneak attack'],
             equipment: ['dagger x2', 'shortbow', 'arrows x 20', 'leather armor']
+        },
+        relationships: {
+            relationship1: {
+                status: false,
+                type: '',
+                name: ''
+            },
+            relationship2: {
+                status: false,
+                type: '',
+                name: ''
+            },
+            relationship3: {
+                status: false,
+                type: '',
+                name: ''
+            },
+            relationship4: {
+                status: false,
+                type: '',
+                name: ''
+            }
         }
     },
 
@@ -284,6 +350,28 @@ const characters = [
             },
             traits: ['wanderer', 'darkvision', 'keen senses', 'fey ancestry', 'trance'],
             equipment: ['staff', 'hunting trap', 'animal trophy', 'traveler\'s clothes']
+        },
+        relationships: {
+            relationship1: {
+                status: false,
+                type: '',
+                name: ''
+            },
+            relationship2: {
+                status: false,
+                type: '',
+                name: ''
+            },
+            relationship3: {
+                status: false,
+                type: '',
+                name: ''
+            },
+            relationship4: {
+                status: false,
+                type: '',
+                name: ''
+            }
         }
     },
 
@@ -356,6 +444,28 @@ const characters = [
             },
             traits: ['darkvision', 'hellish resistance', 'infernal legacy'],
             equipment: []
+        },
+        relationships: {
+            relationship1: {
+                status: false,
+                type: '',
+                name: ''
+            },
+            relationship2: {
+                status: false,
+                type: '',
+                name: ''
+            },
+            relationship3: {
+                status: false,
+                type: '',
+                name: ''
+            },
+            relationship4: {
+                status: false,
+                type: '',
+                name: ''
+            }
         }
     },
 
@@ -428,6 +538,28 @@ const characters = [
             },
             traits: ['darkvision', 'menacing', 'relentless', 'endurance', 'savage attacks'],
             equipment: []
+        },
+        relationships: {
+            relationship1: {
+                status: false,
+                type: '',
+                name: ''
+            },
+            relationship2: {
+                status: false,
+                type: '',
+                name: ''
+            },
+            relationship3: {
+                status: false,
+                type: '',
+                name: ''
+            },
+            relationship4: {
+                status: false,
+                type: '',
+                name: ''
+            }
         }
     },
 
@@ -500,6 +632,28 @@ const characters = [
             },
             traits: [],
             equipment: []
+        },
+        relationships: {
+            relationship1: {
+                status: false,
+                type: '',
+                name: ''
+            },
+            relationship2: {
+                status: false,
+                type: '',
+                name: ''
+            },
+            relationship3: {
+                status: false,
+                type: '',
+                name: ''
+            },
+            relationship4: {
+                status: false,
+                type: '',
+                name: ''
+            }
         }
     },
 
@@ -572,6 +726,28 @@ const characters = [
             },
             traits: [],
             equipment: []
+        },
+        relationships: {
+            relationship1: {
+                status: false,
+                type: '',
+                name: ''
+            },
+            relationship2: {
+                status: false,
+                type: '',
+                name: ''
+            },
+            relationship3: {
+                status: false,
+                type: '',
+                name: ''
+            },
+            relationship4: {
+                status: false,
+                type: '',
+                name: ''
+            }
         }
     },
 
@@ -644,6 +820,28 @@ const characters = [
             },
             traits: ['shapechanger', 'unsettling visage', 'divergent persona'],
             equipment: []
+        },
+        relationships: {
+            relationship1: {
+                status: false,
+                type: '',
+                name: ''
+            },
+            relationship2: {
+                status: false,
+                type: '',
+                name: ''
+            },
+            relationship3: {
+                status: false,
+                type: '',
+                name: ''
+            },
+            relationship4: {
+                status: false,
+                type: '',
+                name: ''
+            }
         }
     },
 
@@ -716,6 +914,28 @@ const characters = [
             },
             traits: [],
             equipment: []
+        },
+        relationships: {
+            relationship1: {
+                status: false,
+                type: '',
+                name: ''
+            },
+            relationship2: {
+                status: false,
+                type: '',
+                name: ''
+            },
+            relationship3: {
+                status: false,
+                type: '',
+                name: ''
+            },
+            relationship4: {
+                status: false,
+                type: '',
+                name: ''
+            }
         }
     },
 
@@ -788,6 +1008,28 @@ const characters = [
             },
             traits: [],
             equipment: []
+        },
+        relationships: {
+            relationship1: {
+                status: false,
+                type: '',
+                name: ''
+            },
+            relationship2: {
+                status: false,
+                type: '',
+                name: ''
+            },
+            relationship3: {
+                status: false,
+                type: '',
+                name: ''
+            },
+            relationship4: {
+                status: false,
+                type: '',
+                name: ''
+            }
         }
     },
 
@@ -860,6 +1102,28 @@ const characters = [
             },
             traits: [],
             equipment: []
+        },
+        relationships: {
+            relationship1: {
+                status: false,
+                type: '',
+                name: ''
+            },
+            relationship2: {
+                status: false,
+                type: '',
+                name: ''
+            },
+            relationship3: {
+                status: false,
+                type: '',
+                name: ''
+            },
+            relationship4: {
+                status: false,
+                type: '',
+                name: ''
+            }
         }
     }
 ]
@@ -937,6 +1201,28 @@ export default characters
             },
             traits: [],
             equipment: []
+        },
+        relationships: {
+            relationship1: {
+                status: false,
+                type: '',
+                name: ''
+            },
+            relationship2: {
+                status: false,
+                type: '',
+                name: ''
+            },
+            relationship3: {
+                status: false,
+                type: '',
+                name: ''
+            },
+            relationship4: {
+                status: false,
+                type: '',
+                name: ''
+            }
         }
     }
 

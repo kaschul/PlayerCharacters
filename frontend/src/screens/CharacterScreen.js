@@ -60,6 +60,7 @@ const CharacterScreen = () => {
               <p> {character.description} </p>
             </Row>
   
+            <div className='d-none d-xl-block'>
             <Row>  {/* Misc character stats  */}
               <Col sm={2}></Col>
               <Col sm={4} class='align-items-center'>
@@ -93,12 +94,54 @@ const CharacterScreen = () => {
                 <br></br>
 
                 <Row><strong class='text-center'>Inspiration:</strong></Row>
-                <Row><span class='text-center'>{character.inspiration === true ? <div><i className='fa-solid fa-star'></i></div> : <div><i className='fa-regular fa-star'></i></div>}</span></Row>
+                <Row><span class='text-center'>{character.inspiration === true ? 
+                <div><i className='fa-solid fa-star'></i></div> : 
+                <div><i className='fa-regular fa-star'></i></div>}</span></Row>
               
                 <br></br>
               </Col>
               <Col sm={2}></Col>
             </Row>  {/* end misc character stats  */}
+            </div>
+
+            <div className='d-none d-xs-block'>
+            <Row>  {/* Misc character stats  */}
+              <Col sm={2}></Col>
+              <Col sm={4} class='align-items-center'>
+          
+                <Row><span className='text-center'><i className='fa-solid fa-shield'></i> : {character.stats.armorClass}</span></Row>
+               
+                <br></br>
+
+                <Row><span className='text-center'><i className='fa-solid fa-forward'></i> : {character.stats.initiative}</span></Row>
+
+                <br></br>
+
+                <Row><span className='text-center'><i className='fa-solid fa-person-walking'></i> : {character.stats.speed} ft</span></Row>
+            
+                <br></br>
+              </Col>
+
+              <Col sm={4} class='align-items-center'>
+
+                <Row><span className='text-center'><i className='fa-solid fa-heart'></i> : {character.stats.hitPointMax}</span></Row>
+               
+                <br></br>
+
+                <Row><span className='text-center'><i className='fa-solid fa-user-graduate'></i> : + {character.stats.profBonus}</span></Row>
+                  
+                <br></br>
+
+                <Row><span className='text-center'>{character.inspiration === true ? <div><i className='fa-solid fa-star'></i></div> : <div><i className='fa-regular fa-star'></i></div>}</span></Row>
+              
+                <br></br>
+              </Col>
+              <Col sm={2}></Col>
+            </Row>  {/* end misc character stats  */}
+            </div>
+
+
+
           </Col>
         </Row>
       </Card>  {/* End character intro card */}

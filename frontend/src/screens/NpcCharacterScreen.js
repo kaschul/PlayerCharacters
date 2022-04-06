@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { Row, Col, Image, Card, Container } from 'react-bootstrap'
-import npcs from '../npcs';
+import npcs from '../../../backend/data/npcs';
 
 const NpcCharacterScreen = () => {
  

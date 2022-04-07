@@ -9,31 +9,45 @@ const npcSchema = mongoose.Schema({
         type: String,
         required: true
     },
+    firstname: {
+        type: String,
+        required: true
+    },
     nickname: {
-        type: String
+        type: String,
+        default: null
     },
     race: {
         type: String,
         required: true
     },
     class: {
-        type: String
+        type: String,
+        default: 'Villager'
     },
     subclass: {
-        type: String
+        type: String,
+        default: ''
     },
     level: {
-        type: Number
+        type: Number,
+        default: 0
     },
     alignment: {
         type: String,
-        required: true
+        default: 'Neutral'
     },
     background: {
-        type: String
+        type: String,
+        default: 'Commoner'
     },
     description: {
-        type: String
+        type: String,
+        default: ''
+    },
+    hasStats: {
+        type: Boolean,
+        default: false
     },
     stats: {
         armorClass: {
@@ -212,23 +226,29 @@ const npcSchema = mongoose.Schema({
         },
         proficiencies: {
             weaponsProf: {
-                type: Array
+                type: Array,
+                default: []
             },
             armorProf: {
-                type: Array
+                type: Array,
+                default: []
             },
             toolProf: {
-                type: Array
+                type: Array,
+                default: []
             },
             languageProf: {
-                type: Array
+                type: Array,
+                default: []
             }
         },
         traits: {
-            type: Array
+            type: Array,
+            default: []
         },
         equipment: {
-            type: Array
+            type: Array,
+            default: []
         }
     },
     relationships: {

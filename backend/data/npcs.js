@@ -12,6 +12,7 @@ const npcs = [
         alignment: 'neutral',
         background: 'artist',
         description: '',
+        hasStats: false,
         stats: {
             armorClass: 0,
             initiative: 0,
@@ -107,6 +108,7 @@ const npcs = [
         alignment: 'chaotic good',
         background: 'guild artisan',
         description: '',
+        hasStats: false,
         stats: {
             armorClass: 0,
             initiative: 0,
@@ -202,6 +204,7 @@ const npcs = [
         alignment: 'neutral',
         background: 'acolyte',
         description: '',
+        hasStats: false,
         stats: {
             armorClass: 0,
             initiative: 0,
@@ -297,6 +300,7 @@ const npcs = [
         alignment: 'neutral',
         background: 'scholar',
         description: '',
+        hasStats: false,
         stats: {
             armorClass: 0,
             initiative: 0,
@@ -392,6 +396,7 @@ const npcs = [
         alignment: 'lawful good',
         background: 'knight',
         description: 'Captain of the Guard, serving under King Malik',
+        hasStats: false,
         stats: {
             armorClass: 0,
             initiative: 0,
@@ -487,6 +492,7 @@ const npcs = [
         alignment: 'lawful good',
         background: 'noble',
         description: 'King of the Western Wilds and father of Rex and Regina, Malik is used to lots of responsibility and very little free time.',
+        hasStats: false,
         stats: {
             armorClass: 0,
             initiative: 0,
@@ -582,6 +588,7 @@ const npcs = [
         alignment: 'neutral',
         background: 'spy',
         description: 'Spymaster for King Malik and Captain Kennmi.',
+        hasStatus: false,
         stats: {
             armorClass: 0,
             initiative: 0,
@@ -677,6 +684,7 @@ const npcs = [
         alignment: 'neutral',
         background: 'noble',
         description: 'Princess of the Eastern Isles and heir apparent to the throne, Aimi is currently engaged to Princess Reigna.',
+        hasStats: false,
         stats: {
             armorClass: 0,
             initiative: 0,
@@ -773,6 +781,7 @@ const npcs = [
         alignment: '',
         background: 'pirate',
         description: 'Sutha grew up serving under her uncle Krusk, then under her older cousin Thokk.  Now she is the captain of the ship.',
+        hasStats: false,
         stats: {
             armorClass: 0,
             initiative: 0,
@@ -868,6 +877,7 @@ const npcs = [
         alignment: '',
         background: 'pirate',
         description: 'Once the Dread Pirate Krusk of the South Seas, now retired and enjoying a leisurly life as a (not particularly talented) artist.',
+        hasStats: false,
         stats: {
             armorClass: 0,
             initiative: 0,
@@ -963,6 +973,7 @@ const npcs = [
         alignment: '',
         background: '',
         description: '',
+        hasStats: false,
         stats: {
             armorClass: 0,
             initiative: 0,
@@ -1058,6 +1069,7 @@ const npcs = [
         alignment: '',
         background: '',
         description: '',
+        hasStats: false,
         stats: {
             armorClass: 0,
             initiative: 0,
@@ -1155,6 +1167,7 @@ const npcs = [
         alignment: 'neutral',
         background: 'soldier',
         description: 'Forged in the same batch as unit LVI, unit LX is a battle-hardened warrior with a tendency to question orders.',
+        hasStats: false,
         stats: {
             armorClass: 0,
             initiative: 0,
@@ -1251,6 +1264,7 @@ const npcs = [
         alignment: 'chaotic good',
         background: '',
         description: '',
+        hasStats: false,
         stats: {
             armorClass: 0,
             initiative: 0,
@@ -1346,6 +1360,7 @@ const npcs = [
         alignment: 'chaotic good',
         background: 'scholar',
         description: '',
+        hasStats: false,
         stats: {
             armorClass: 0,
             initiative: 0,
@@ -1441,6 +1456,7 @@ const npcs = [
         alignment: 'chaotic good',
         background: '',
         description: '',
+        hasStats: false,
         stats: {
             armorClass: 0,
             initiative: 0,

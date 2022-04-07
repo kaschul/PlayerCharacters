@@ -1,18 +1,31 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { Link, useParams } from 'react-router-dom'
 import { Row, Col, Image, Card, Container } from 'react-bootstrap'
-import characters from '../../../backend/data/characters';
+
+import Message from '../components/Message'
+import Loader from '../components/Loader'
+import { listCharacterDetails } from '../actions/characterActions'
+
+
 
 const CharacterScreen = () => {
  
   const params = useParams();
+  const dispatch = useDispatch()
+  const characterDetails = useSelector((state) => state.characterDetails)
+  const { loading, error, character } = characterDetails
+  useEffect(() => {
+    dispatch(listCharacterDetails(params.id))
+  }, [dispatch, params])
 
-  const character = characters.find((p) => p._id === params.id)
   return(
     <>
       <Link className='btn btn-light my-3' to='/'>
         Go Back
       </Link>
+
+      {loading ? (<Loader />) : error ? (<Message variant='danger'>{error}</Message>) : (
 
       <Container>
       <Row xs={1} md={2} className="g-4">  {/* start card grid */}
@@ -58,6 +71,22 @@ const CharacterScreen = () => {
 
             <Row>
               <p> {character.description} </p>
+            </Row>
+
+            <Row>
+                <span>{character.relationships.relationship1.status !== true 
+                  ? (<>No Relationships</>)
+                  : (<>{character.relationships.relationship1.name} - {character.relationships.relationship1.type} </>)
+                }</span>
+            </Row>
+            <Row>
+                <span>{character.relationships.relationship2 !== false && <>{character.relationships.relationship2.name} - {character.relationships.relationship2.type}</>}</span>
+            </Row>
+            <Row>
+                <span>{character.relationships.relationship3 !== false && <>{character.relationships.relationship3.name} - {character.relationships.relationship3.type}</>}</span>
+            </Row>
+            <Row>
+                <span>{character.relationships.relationship4 !== false && <>{character.relationships.relationship4.name} - {character.relationships.relationship4.type}</>}</span>
             </Row>
   
             <div className='d-none d-xl-block'>
@@ -584,6 +613,7 @@ const CharacterScreen = () => {
     </Col>  
     </Row>  {/* end card grid */}
     </Container>
+    )}
   </>
   )
 }

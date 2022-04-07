@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { Link, useParams } from 'react-router-dom'
-import { Row, Col, Image, Card, Container } from 'react-bootstrap'
+import { Link, useNavigate, useParams } from 'react-router-dom'
+import { Row, Col, Image, Card, Container, Button } from 'react-bootstrap'
 
 import Message from '../components/Message'
 import Loader from '../components/Loader'
@@ -13,11 +13,17 @@ const CharacterScreen = () => {
  
   const params = useParams();
   const dispatch = useDispatch()
+  const navigate = useNavigate()
   const characterDetails = useSelector((state) => state.characterDetails)
   const { loading, error, character } = characterDetails
+  
   useEffect(() => {
     dispatch(listCharacterDetails(params.id))
   }, [dispatch, params])
+
+  const addToCartHandler = () => {
+    navigate(`/cart/${params.id}`)
+  }
 
   return(
     <>
@@ -40,6 +46,15 @@ const CharacterScreen = () => {
           <Col>
             <Image src={character.image} alt={character.name} fluid />
           </Col>
+        </Row>
+        <Row>
+          <Button
+            className='btn-block'
+            type='button'
+            onClick={addToCartHandler}
+          >
+            Add to Adventuring Party
+          </Button>
         </Row>
       </Card>
 

@@ -4,6 +4,7 @@ import { composeWithDevTools } from 'redux-devtools-extension'
 
 import { characterListReducer, characterDetailReducer, 
     npcListReducer, npcDetailReducer } from './reducers/characterReducers'
+import { cartReducer } from './reducers/cartReducers'
 
 
 
@@ -11,9 +12,16 @@ const reducer = combineReducers({
     characterList: characterListReducer,
     characterDetails: characterDetailReducer,
     npcList: npcListReducer,
-    npcDetails: npcDetailReducer
+    npcDetails: npcDetailReducer,
+    cart: cartReducer
 })
-const initialState = {}
+
+const cartItemsFromStorage = localStorage.getItem('cartItems') 
+    ? JSON.parse(localStorage.getItem('cartItems')) 
+    : []
+const initialState = {
+    cart: {cartItems: cartItemsFromStorage}
+}
 const middleware = [thunk]
 const store = createStore(
                 reducer,

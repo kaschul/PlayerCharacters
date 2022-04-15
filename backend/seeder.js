@@ -13,8 +13,22 @@ const importData = async () => {
         await PCs.deleteMany()
         await NPCs.deleteMany()
 
-        await PCs.insertMany()
-        await NPCs.insertMany()
+        const createdPC = await PCs.insertMany(characters)
+        const createdNPC = await NPCs.insertMany(npcs)
+        const firstCharacter = createdPC[0]._id
+        const firstNPC = createdNPC[0]._id
+
+        const samplePCs = characters.map((p) => {
+            return {...p, character: firstCharacter}
+        })
+        const sampleNPCs = npcs.map((p) => {
+            return {...p, npc: firstNPC}
+        })
+
+        await PCs.insertMany(samplePCs)
+        await NPCs.insertMany(sampleNPCs)
+        console.log('Characters are added!')
+        process.exit()
 
     } catch (error) {
 
@@ -28,7 +42,7 @@ const destroyData = async () => {
         await PCs.deleteMany()
         await NPCs.deleteMany()
 
-        console.log('Data is destroyed')
+        console.log('Characters are deleted!')
         process.exit()
 
     } catch (error) {

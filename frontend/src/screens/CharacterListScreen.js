@@ -12,6 +12,7 @@ const CharacterListScreen = () => {
   const dispatch = useDispatch()
   const characterList = useSelector((state) => state.characterList)
   const {loading, error, characters} = characterList
+
   useEffect(() => {
     dispatch(listCharacters())
   }, [dispatch])
@@ -32,7 +33,7 @@ const CharacterListScreen = () => {
         ) : (
         <Row>
             {characters.map((character) => (
-                <Col sm={12} md={6} lg={4} xl={3}>
+                <Col key={character._id} sm={12} md={6} lg={4} xl={3}>
                     <Character character={character} />
                 </Col>
             ))}

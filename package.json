@@ -1,5 +1,5 @@
 {
-  "name": "PlayerCharacters",
+  "name": "playercharacters",
   "version": "1.0.0",
   "description": "A list of my D&D characters and NPCs",
   "main": "server.js",

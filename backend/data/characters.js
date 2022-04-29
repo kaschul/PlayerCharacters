@@ -1,6 +1,5 @@
 const characters = [
     {
-        _id: '1',
         image: '/images/mindartis.jpg',
         name: 'Mindartis Liadon',
         firstname: 'Mindartis',
@@ -95,7 +94,6 @@ const characters = [
     },
 
     {
-        _id: '2',
         image: '/images/enna.jpg',
         name: 'Enna Xiloscient',
         firstname: 'Enna',
@@ -190,7 +188,6 @@ const characters = [
     },
 
     {
-        _id: '3',
         image: '/images/lark.jpg',
         name: 'Lark',
         firstname: 'Lark',
@@ -285,7 +282,6 @@ const characters = [
     },
 
     {
-        _id: '4',
         image: '/images/willow.jpg',
         name: 'Willow',
         firstname: 'Willow',
@@ -380,7 +376,6 @@ const characters = [
     },
 
     {
-        _id: '5',
         image: '/images/merit.jpg',
         name: 'Merit',
         firstname: 'Merit',
@@ -475,7 +470,6 @@ const characters = [
     },
 
     {
-        _id: '6',
         image: '/images/thokk.jpg',
         name: 'Thokk Hullbreak',
         firstname: 'Thokk',
@@ -570,7 +564,6 @@ const characters = [
     },
 
     {
-        _id: '7',
         image: '/images/rex.jpg',
         name: 'Rex',
         firstname: 'Rex',
@@ -665,7 +658,6 @@ const characters = [
     },
 
     {
-        _id: '8',
         image: '/images/reigna.jpg',
         name: 'Reigna',
         firstname: 'Reigna',
@@ -760,7 +752,6 @@ const characters = [
     },
 
     {
-        _id: '9',
         image: '/images/lux.jpg',
         name: 'Lux',
         firstname: 'Lux',
@@ -855,7 +846,6 @@ const characters = [
     },
 
     {
-        _id: '10',
         image: '/images/clover.jpg',
         name: 'Clover Fleetfoot',
         firstname: 'Clover',
@@ -950,7 +940,6 @@ const characters = [
     },
 
     {
-        _id: '11',
         image: 'images/thia.jpg',
         name: 'Thia',
         firstname: 'Thia',
@@ -1045,7 +1034,6 @@ const characters = [
     },
 
     {
-        _id: '12',
         image: '/images/unitLVI.jpg',
         name: 'unit LVI',
         firstname: 'Levi',

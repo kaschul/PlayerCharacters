@@ -4,13 +4,12 @@ import getNPCs, { getNPCById } from '../controllers/npcController.js'
 
 const router = express.Router()
 
-
-// @desc    Fetch all characters
+// @desc    Fetch all player characters
 // @route   GET /api/characters
 // @access  Public
 router.get('/characters', getCharacters)
 
-// @desc    Fetch single character by id
+// @desc    Fetch single player character by id
 // @route   GET /api/characters/:id
 // @access  Public
 router.get('/characters/:id', getCharacterById)
@@ -24,6 +23,5 @@ router.get('/npcs', getNPCs)
 // @route   GET /api/npcs/:id
 // @access  Public
 router.get('/npcs/:id', getNPCById)
-
 
 export default router

@@ -1,6 +1,5 @@
 const npcs = [
     {
-        _id: '1',
         image: '/images/npcs/theirastra.jpg',
         name: 'Theirastra Siannodel Liadon',
         firstname: 'Theirastra',
@@ -96,7 +95,6 @@ const npcs = [
     },
 
     {
-        _id: '2',
         image: '/images/npcs/leondartis.jpg',
         name: 'Leondartis Liadon',
         firstname: 'Leondartis',
@@ -192,7 +190,6 @@ const npcs = [
     },
 
     {
-        _id: '3',
         image: '/images/npcs/leyandra.jpg',
         name: 'Leyandra Liadon Xiloscient',
         firstname: 'Leyandra',
@@ -288,7 +285,6 @@ const npcs = [
     },
 
     {
-        _id: '4',
         image: '/images/npcs/erdan.jpg',
         name: 'Erdan Xiloscient',
         firstname: 'Erdan',
@@ -384,7 +380,6 @@ const npcs = [
     },
 
     {
-        _id: '5',
         image: '/images/npcs/kennmi.jpg',
         name: 'Kennmi',
         firstname: 'Kennmi',
@@ -480,7 +475,6 @@ const npcs = [
     },
 
     {
-        _id: '6',
         image: '/images/npcs/malik.jpg',
         name: 'Malik',
         firstname: 'Malik',
@@ -576,7 +570,6 @@ const npcs = [
     },
 
     {
-        _id: '7',
         image: '/images/npcs/xuto.jpg',
         name: 'Li Xuto',
         firstname: 'Xuto',
@@ -672,7 +665,6 @@ const npcs = [
     },
 
     {
-        _id: '8',
         image: '/images/npcs/aimi.jpg',
         name: 'Kato Aimi',
         firstname: 'Aimi',
@@ -769,7 +761,6 @@ const npcs = [
 
 
     {
-        _id: '9',
         image: '/images/npcs/sutha.jpg',
         name: 'Sutha Hullbreak',
         firstname: 'Sutha',
@@ -865,7 +856,6 @@ const npcs = [
     },
 
     {
-        _id: '10',
         image: '/images/npcs/krusk.jpg',
         name: 'Krusk Hullbreak',
         firstname: 'Krusk',
@@ -961,7 +951,6 @@ const npcs = [
     },
 
     {
-        _id: '11',
         image: '/images/npcs/felix.jpg',
         name: 'Felix Fleetfoot',
         firstname: 'Felix',
@@ -1057,7 +1046,6 @@ const npcs = [
     },
 
     {
-        _id: '12',
         image: '/images/npcs/ivy.jpg',
         name: 'Ivy',
         firstname: 'Ivy',
@@ -1155,7 +1143,6 @@ const npcs = [
     
 
     {
-        _id: '13',
         image: '/images/npcs/unitLX.jpg',
         name: 'unit LX',
         firstname: 'Lex',
@@ -1252,7 +1239,6 @@ const npcs = [
 
     
     {
-        _id: '14',
         image: '/images/npcs/petrichor.jpg',
         name: 'Petrichor',
         firstname: 'Petrichor',
@@ -1348,7 +1334,6 @@ const npcs = [
     },
 
     {
-        _id: '15',
         image: '/images/npcs/ruriana.jpg',
         name: 'Ruriana',
         firstname: 'Ruriana',
@@ -1444,7 +1429,6 @@ const npcs = [
     },
 
     {
-        _id: '16',
         image: '/images/npcs/delvin.jpg',
         name: 'Delvin',
         firstname: 'Delvin',
@@ -1538,11 +1522,6 @@ const npcs = [
             }
         }
     }
-
-
-    
-    
-   
 ]
 
 export default npcs

@@ -2,23 +2,19 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import { Row, Col, Image, Card, Container, Button } from 'react-bootstrap'
-
 import Message from '../components/Message'
 import Loader from '../components/Loader'
-import { listCharacterDetails } from '../actions/characterActions'
-
-
+import { listPCDetails } from '../actions/characterActions'
 
 const CharacterScreen = () => {
- 
-  const params = useParams();
+  const params = useParams()
   const dispatch = useDispatch()
   const navigate = useNavigate()
   const characterDetails = useSelector((state) => state.characterDetails)
   const { loading, error, character } = characterDetails
   
   useEffect(() => {
-    dispatch(listCharacterDetails(params.id))
+    dispatch(listPCDetails(params.id))
   }, [dispatch, params])
 
   const addToCartHandler = () => {
@@ -34,14 +30,12 @@ const CharacterScreen = () => {
       {loading ? (<Loader />) : error ? (<Message variant='danger'>{error}</Message>) : (
 
       <Container>
-      <Row xs={1} md={2} className="g-4">  {/* start card grid */}
+      <Row xs={1} md={2} className="g-4">
       <Col>
 
+{/* NEW CARD - character intro card */}
 
-
-
-{/* NEW CARD */}
-      <Card>  {/* Character intro card */}
+      <Card>
         <Row>
           <Col>
             <Image src={character.image} alt={character.name} fluid />
@@ -58,15 +52,12 @@ const CharacterScreen = () => {
         </Row>
       </Card>
 
+{/* NEW CARD - character info card */}
 
-
-
-{/* NEW CARD */}
-
-<Card body>
+      <Card body>
         <Row>          
           <Col>
-            <Row>  {/* character nickname only displayed if not null */}
+            <Row>
               <span><h3>{character.name}</h3> {character.nickname != null && <>(aka {character.nickname})</>}</span>
             </Row>
 
@@ -75,7 +66,7 @@ const CharacterScreen = () => {
             <Row>
               <span>{character.race} - {character.alignment}</span>
             </Row>
-            <Row>  {/* character subclass only displayed if not null */}
+            <Row>
               <span>Lvl {character.level} {character.class} {character.subclass != null && <>- {character.subclass}</>}</span>
             </Row>
             <Row>
@@ -105,7 +96,7 @@ const CharacterScreen = () => {
             </Row>
   
             <div className='d-none d-xl-block'>
-            <Row>  {/* Misc character stats  */}
+            <Row>
               <Col sm={2}></Col>
               <Col sm={4} class='align-items-center'>
           
@@ -145,11 +136,11 @@ const CharacterScreen = () => {
                 <br></br>
               </Col>
               <Col sm={2}></Col>
-            </Row>  {/* end misc character stats  */}
+            </Row>
             </div>
 
             <div className='d-none d-xs-block'>
-            <Row>  {/* Misc character stats  */}
+            <Row>
               <Col sm={2}></Col>
               <Col sm={4} class='align-items-center'>
           
@@ -181,26 +172,18 @@ const CharacterScreen = () => {
                 <br></br>
               </Col>
               <Col sm={2}></Col>
-            </Row>  {/* end misc character stats  */}
+            </Row>
             </div>
-
-
 
           </Col>
         </Row>
-      </Card>  {/* End character intro card */}
-
-
-
+      </Card>
 
       </Col>
       <Col>
 
-
-      
-
-{/* NEW CARD */}
-      <Card body>  {/* character stats card */}
+{/* NEW CARD - character stats card */}
+      <Card body>
      
       <Col>
         <Row> {/* Row 1 - Column Titles */}
@@ -208,10 +191,8 @@ const CharacterScreen = () => {
           <Col xs={9}>
             <strong className='text-nowrap d-none d-xl-inline-block'> STATS&nbsp;&nbsp;-&nbsp;&nbsp;(MODIFIERS)&nbsp;&nbsp;-&nbsp;&nbsp;SAVING THROWS&nbsp;&nbsp;-&nbsp;&nbsp;SKILLS </strong>
           </Col>
-        </Row> {/* End Row 1 - Column Titles */}
+        </Row>
         <hr/>
-{/* ------------------- */}
-        
 
         <Row> {/* Row 2 - Strength */}
 
@@ -254,7 +235,7 @@ const CharacterScreen = () => {
             </Row>
           </Col>
 
-        </Row> {/* End Row 2 - strength */}
+        </Row>
 
 {/* ------------------- */}
   
@@ -315,9 +296,7 @@ const CharacterScreen = () => {
             </Row>
           </Col>
 
-        </Row> {/* End Row 3 - dexterity */}
-
-{/* ------------------- */}
+        </Row>
         
         <hr/>
 
@@ -360,9 +339,7 @@ const CharacterScreen = () => {
             </Row>
           </Col>
 
-        </Row> {/* End Row 4 - const */}
-
-{/* ------------------- */}
+        </Row>
         
         <hr/>
 
@@ -431,9 +408,7 @@ const CharacterScreen = () => {
             </Row>
           </Col>
 
-        </Row> {/* End Row 5 - intel */}
-
-{/* ------------------- */}
+        </Row>
         
         <hr/>
 
@@ -502,10 +477,8 @@ const CharacterScreen = () => {
             </Row>
           </Col>
 
-        </Row> {/* End Row 6 - wisdom */}
+        </Row>
 
-{/* ------------------- */}
-        
         <hr/>
 
         <Row> {/* Row 7 - Charisma */}
@@ -568,14 +541,11 @@ const CharacterScreen = () => {
               </Col>
             </Row>
           </Col>
-        </Row> {/* End Row 7 - charisma */}
+        </Row>
       </Col>
     </Card>
 
-
-
-
-{/* NEW CARD */}
+{/* NEW CARD - character proficiencies card */}
     <Card body>
       <Col>
 
@@ -626,7 +596,7 @@ const CharacterScreen = () => {
     </Card>
 
     </Col>  
-    </Row>  {/* end card grid */}
+    </Row>
     </Container>
     )}
   </>

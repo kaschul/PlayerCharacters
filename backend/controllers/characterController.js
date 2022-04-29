@@ -5,20 +5,20 @@ import Characters from '../models/characterModel.js'
 // @route   GET /api/pcs
 // @access  Public
 const getCharacters = asyncHandler(async (req, res) => {
-    const characters = await Characters.find({})
-    res.json(characters)
+  const characters = await Characters.find({})
+  res.json(characters)
 })
 
 const getCharacterById = asyncHandler(async (req, res) => {
-    const character = await Characters.findById(req.params.id)
+  const character = await Characters.findById(req.params.id)
 
-    if (character){
-        res.json(character)
-    } else {
-        //res.status(404).json({message: 'Character not found'})
-        res.status(404)
-        throw new Error('Character not found')
-    }
+  if (character){
+    res.json(character)
+  } else {
+    //res.status(404).json({message: 'Character not found'})
+    res.status(404)
+    throw new Error('Character not found')
+  }
 })
 
 export {getCharacters, getCharacterById}

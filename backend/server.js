@@ -3,6 +3,8 @@ import dotenv from 'dotenv'
 import path from 'path'
 import connectDB from './config/db.js'
 import characterRoutes from './routes/characterRoutes.js'
+import userRoutes from './routes/userRoutes.js'
+import orderRoutes from './routes/orderRoutes.js'
 import { notFound, errorHandler } from './middleware/errorMiddleware.js'
 
 const app = express()
@@ -10,8 +12,10 @@ dotenv.config()
 connectDB()
 
 app.use(express.json())
-app.use('/api/characters', characterRoutes)
+app.use('/api/pcs', characterRoutes)
 app.use('/api/npcs', characterRoutes)
+app.use('/api/partyplayers', userRoutes)
+app.use('/api/playerorders', orderRoutes)
 
 const __dirname = path.resolve()
 

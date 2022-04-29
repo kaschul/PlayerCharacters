@@ -1,4 +1,4 @@
-const characters = [
+const pcs = [
     {
         image: '/images/mindartis.jpg',
         name: 'Mindartis Liadon',
@@ -1128,7 +1128,7 @@ const characters = [
     }
 ]
 
-export default characters
+export default pcs
 
 /* template for character object
 

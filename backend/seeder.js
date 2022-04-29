@@ -1,9 +1,11 @@
 import dotenv from 'dotenv'
-import characters from './data/characters.js'
-import npcs from './data/npcs.js'
-import PCs from './models/characterModel.js'
-import NPCs from './models/npcModel.js'
 import connectDB from './config/db.js'
+import pcs from './data/pcs.js'
+import npcs from './data/npcs.js'
+import partyplayers from './data/partyplayers.js'
+import PCs from './models/pcModel.js'
+import NPCs from './models/npcModel.js'
+import PartyPlayers from './models/userModel.js'
 
 dotenv.config()
 connectDB()
@@ -12,22 +14,21 @@ const importData = async () => {
   try{
     await PCs.deleteMany()
     await NPCs.deleteMany()
+    await PartyPlayers.deleteMany()
 
-    const createdPC = await PCs.insertMany(characters)
-    const createdNPC = await NPCs.insertMany(npcs)
-    const firstCharacter = createdPC[0]._id
-    const firstNPC = createdNPC[0]._id
+    const createdUsers = await PartyPlayers.insertMany(partyplayers)
+    const adminUser = createdUsers[0]._id
 
-    const samplePCs = characters.map((p) => {
-      return {...p, character: firstCharacter}
+    const samplePCs = pcs.map((p) => {
+      return {...p, user: adminUser}
     })
     const sampleNPCs = npcs.map((p) => {
-      return {...p, npc: firstNPC}
+      return {...p, user: adminUser}
     })
 
     await PCs.insertMany(samplePCs)
     await NPCs.insertMany(sampleNPCs)
-    console.log('Characters are added!')
+    console.log('Data is imported!')
     process.exit()
 
   } catch (error) {
@@ -40,7 +41,9 @@ const destroyData = async () => {
   try{
     await PCs.deleteMany()
     await NPCs.deleteMany()
-    console.log('Characters are deleted!')
+    await PartyPlayers.deleteMany()
+
+    console.log('Data is destroyed!')
     process.exit()
 
   } catch (error) {

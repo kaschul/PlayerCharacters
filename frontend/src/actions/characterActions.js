@@ -18,7 +18,7 @@ export const listPCs = () => async (dispatch) => {
   try{
     dispatch({ type: PC_LIST_REQUEST });
     
-    const {data} = await axios.get('/api/characters')
+    const {data} = await axios.get('/api/pcs')
 
     dispatch({
       type: PC_LIST_SUCCESS,
@@ -39,7 +39,7 @@ export const listPCDetails = (id) => async (dispatch) => {
   try{
     dispatch({ type: PC_DETAIL_REQUEST })
 
-    const {data} = await axios.get(`/api/characters/${id}`)
+    const {data} = await axios.get(`/api/pcs/${id}`)
 
     dispatch({
       type: PC_DETAIL_SUCCESS,

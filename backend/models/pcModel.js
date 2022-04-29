@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const characterSchema = mongoose.Schema({
+const pcSchema = mongoose.Schema({
     image: {
         type: String,
         required: true

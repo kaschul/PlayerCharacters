@@ -1,18 +1,18 @@
 import express from 'express'
-import getCharacters, { getCharacterById } from '../controllers/characterController.js'
+import getPCs, { getPCById } from '../controllers/pcController.js'
 import getNPCs, { getNPCById } from '../controllers/npcController.js'
 
 const router = express.Router()
 
 // @desc    Fetch all player characters
-// @route   GET /api/characters
+// @route   GET /api/pcs
 // @access  Public
-router.get('/characters', getCharacters)
+router.get('/pcs', getPCs)
 
 // @desc    Fetch single player character by id
-// @route   GET /api/characters/:id
+// @route   GET /api/pcs/:id
 // @access  Public
-router.get('/characters/:id', getCharacterById)
+router.get('/pcs/:id', getPCById)
 
 // @desc    Fetch all NPCs
 // @route   GET /api/npcs

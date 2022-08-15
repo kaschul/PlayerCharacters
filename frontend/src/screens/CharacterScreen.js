@@ -143,13 +143,13 @@ const CharacterScreen = () => {
 
           <Col xs={1}> {/* Col 2 - Stats */}
             <Row>
-              <span className='text-nowrap'>{character.stats.vitals.strength}</span>
+              <span className='text-nowrap float-right'>{character.stats.vitals.strength}</span>
             </Row>
           </Col>
 
           <Col xs={2}> {/* Col 3 - Modifiers */}
             <Row>
-              <span className='text-nowrap'>
+              <span className='text-nowrap float-right'>
               ({character.stats.vitals.strengthModifier < 0 ? 
                 <> - {Math.abs(character.stats.vitals.strengthModifier)} </> :
                 character.stats.vitals.strengthModifier > 0 ?
@@ -161,15 +161,21 @@ const CharacterScreen = () => {
 
           <Col xs={1}> {/* Col 4 - Saving Throws */}
             <Row>
-              <span>{character.stats.savingThrows.strengthST}</span>
+              <span className='text-nowrap float-right'>{character.stats.savingThrows.strengthST}</span>
             </Row>
           </Col>
           
-          <Col xs={4}> {/* Col 5 - Skills (strength - athletics) */}
+          <Col xs={3}> {/* Col 5 - Skills (strength - athletics) */}
             <Row>
-              <span><i className='fa-solid fa-person-hiking'></i>&nbsp;&nbsp; 
+              <span className='text-nowrap'><i className='fa-solid fa-person-hiking'></i>&nbsp;&nbsp; 
               <span className='d-none d-xl-inline-block'>Athletics:</span>
-              &nbsp;&nbsp;{character.stats.skills.athletics}</span>
+              </span>
+            </Row>
+          </Col>
+
+          <Col xs={1}>
+            <Row>
+              <span className='text-nowrap float-right'>{character.stats.skills.athletics}</span>
             </Row>
           </Col>
 
@@ -190,13 +196,13 @@ const CharacterScreen = () => {
 
           <Col xs={1}> {/* Col 2 - Stats */}
             <Row>
-              <span className='text-nowrap'>{character.stats.vitals.dexterity}</span>
+              <span className='text-nowrap float-right'>{character.stats.vitals.dexterity}</span>
             </Row>
           </Col>
 
           <Col xs={2}> {/* Col 3 - Modifiers */}
             <Row>
-              <span className='text-nowrap'>
+              <span className='text-nowrap float-right'>
               ({character.stats.vitals.dexModifier < 0 ? 
                 <> - {Math.abs(character.stats.vitals.dexModifier)} </> :
                 character.stats.vitals.dexModifier > 0 ?
@@ -208,29 +214,40 @@ const CharacterScreen = () => {
 
           <Col xs={1}> {/* Col 4 - Saving Throws */}
             <Row>
-              <span>{character.stats.savingThrows.dexterityST}</span>
+              <span className='text-nowrap float-right'>{character.stats.savingThrows.dexterityST}</span>
             </Row>
           </Col>
 
-          <Col xs={4}> {/* Col 5 - Skills (dex - acrobatics, sleight of hand, stealth) */}
+          <Col xs={3}> {/* Col 5 - Skills (dex - acrobatics, sleight of hand, stealth) */}
             <Row>
               <Col>
                 <Row>
-                  <span><i className='fa-solid fa-person-running'></i>&nbsp;&nbsp; 
+                <span className='text-nowrap'><i className='fa-solid fa-person-running'></i>&nbsp;&nbsp; 
                   <span className='d-none d-xl-inline-block'>Acrobatics:</span>
-                  &nbsp;&nbsp;{character.stats.skills.acrobatics}</span>
+                  </span>
                 </Row>
                 <Row>
-                  <span><i className='fa-solid fa-hand'></i>&nbsp;&nbsp; 
+                <span className='text-nowrap'><i className='fa-solid fa-hand'></i>&nbsp;&nbsp; 
                   <span className='d-none d-xl-inline-block'>Slight of Hand:</span>
-                  &nbsp;&nbsp;{character.stats.skills.slightOfHand}</span>
+                  </span>
                 </Row>
                 <Row>
-                  <span><i className='fa-solid fa-eye-slash'></i>&nbsp;&nbsp; 
+                <span className='text-nowrap'><i className='fa-solid fa-eye-slash'></i>&nbsp;&nbsp; 
                   <span className='d-none d-xl-inline-block'>Stealth:</span>
-                  &nbsp;&nbsp;{character.stats.skills.stealth}</span>
+                </span>
                 </Row>
               </Col>
+            </Row>
+          </Col>
+          <Col xs={1}>
+            <Row>
+              <span className='text-nowrap float-right'>{character.stats.skills.acrobatics}</span>
+            </Row>
+            <Row>
+              <span className='text-nowrap float-right'>{character.stats.skills.slightOfHand}</span>
+            </Row>
+            <Row>
+              <span className='text-nowrap float-right'>{character.stats.skills.stealth}</span>
             </Row>
           </Col>
 
@@ -251,13 +268,13 @@ const CharacterScreen = () => {
 
           <Col xs={1}> {/* Col 2 - Stats */}
             <Row>
-              <span className='text-nowrap'>{character.stats.vitals.constitution}</span>
+              <span className='text-nowrap float-right'>{character.stats.vitals.constitution}</span>
             </Row>
           </Col>
 
           <Col xs={2}> {/* Col 3 - Modifiers */}
             <Row>
-              <span className='text-nowrap'>
+              <span className='text-nowrap float-right'>
               ({character.stats.vitals.constModifier < 0 ? 
                 <> - {Math.abs(character.stats.vitals.constModifier)} </> :
                 character.stats.vitals.constModifier > 0 ?
@@ -269,7 +286,7 @@ const CharacterScreen = () => {
 
           <Col xs={1}> {/* Col 4 - Saving Throws */}
             <Row>
-              <span>{character.stats.savingThrows.constitutionST}</span>
+              <span className='text-nowrap float-right'>{character.stats.savingThrows.constitutionST}</span>
             </Row>
           </Col>
 
@@ -296,13 +313,13 @@ const CharacterScreen = () => {
 
           <Col xs={1}> {/* Col 2 - Stats */}
             <Row>
-              <span className='text-nowrap'>{character.stats.vitals.intelligence}</span>
+              <span className='text-nowrap float-right'>{character.stats.vitals.intelligence}</span>
             </Row>
           </Col>
 
           <Col xs={2}> {/* Col 3 - Modifiers */}
             <Row>
-              <span className='text-nowrap'>
+              <span className='text-nowrap float-right'>
               ({character.stats.vitals.intelModifier < 0 ? 
                 <> - {Math.abs(character.stats.vitals.intelModifier)} </> :
                 character.stats.vitals.intelModifier > 0 ?
@@ -314,39 +331,56 @@ const CharacterScreen = () => {
 
           <Col xs={1}> {/* Col 4 - Saving Throws */}
             <Row>
-              <span>{character.stats.savingThrows.intelligenceST}</span>
+              <span className='text-nowrap float-right'>{character.stats.savingThrows.intelligenceST}</span>
             </Row>
           </Col>
 
-          <Col xs={4}> {/* Col 5 - Skills (intelligence - arcana, history, investigation, nature, religion) */}
+          <Col xs={3}> {/* Col 5 - Skills (intelligence - arcana, history, investigation, nature, religion) */}
             <Row>
               <Col>
                 <Row>
-                  <span><i className='fa-solid fa-wand-magic-sparkles'></i>&nbsp;&nbsp; 
+                <span className='text-nowrap'><i className='fa-solid fa-wand-magic-sparkles'></i>&nbsp;&nbsp; 
                   <span className='d-none d-xl-inline-block'>Arcana:</span>
-                  &nbsp;&nbsp;{character.stats.skills.arcana}</span>
+                  </span>
                 </Row>
                 <Row>
-                  <span><i className='fa-solid fa-bone'></i>&nbsp;&nbsp; 
+                <span className='text-nowrap'><i className='fa-solid fa-bone'></i>&nbsp;&nbsp; 
                   <span className='d-none d-xl-inline-block'>History:</span>
-                  &nbsp;&nbsp;{character.stats.skills.history}</span>
+                  </span>
                 </Row>
                 <Row>
-                  <span><i className='fa-solid fa-magnifying-glass'></i>&nbsp;&nbsp; 
+                <span className='text-nowrap'><i className='fa-solid fa-magnifying-glass'></i>&nbsp;&nbsp; 
                   <span className='d-none d-xl-inline-block'>Investigation:</span>
-                  &nbsp;&nbsp;{character.stats.skills.investigation}</span>
+                  </span>
                 </Row>
                 <Row>
-                  <span><i className='fa-solid fa-seedling'></i>&nbsp;&nbsp; 
+                <span className='text-nowrap'><i className='fa-solid fa-seedling'></i>&nbsp;&nbsp; 
                   <span className='d-none d-xl-inline-block'>Nature:</span>
-                  &nbsp;&nbsp;{character.stats.skills.nature}</span>
+                 </span>
                 </Row>
                 <Row>
-                  <span><i className='fa-solid fa-hands-praying'></i>&nbsp;&nbsp; 
+                <span className='text-nowrap'><i className='fa-solid fa-hands-praying'></i>&nbsp;&nbsp; 
                   <span className='d-none d-xl-inline-block'>Religion:</span>
-                  &nbsp;&nbsp;{character.stats.skills.religion}</span>
+                </span>
                 </Row>
               </Col>
+            </Row>
+          </Col>
+          <Col xs={1}>
+            <Row>
+              <span className='text-nowrap float-right'>{character.stats.skills.arcana}</span>
+            </Row>
+            <Row>
+              <span className='text-nowrap float-right'>{character.stats.skills.history}</span>
+            </Row>
+            <Row>
+              <span className='text-nowrap float-right'>{character.stats.skills.investigation}</span>
+            </Row>
+            <Row>
+              <span className='text-nowrap float-right'>{character.stats.skills.perception}</span>
+            </Row>
+            <Row>
+              <span className='text-nowrap float-right'>{character.stats.skills.survival}</span>
             </Row>
           </Col>
 
@@ -367,13 +401,13 @@ const CharacterScreen = () => {
 
           <Col xs={1}> {/* Col 2 - Stats */}
             <Row>
-              <span className='text-nowrap'>{character.stats.vitals.wisdom}</span>
+              <span className='text-nowrap float-right'>{character.stats.vitals.wisdom}</span>
             </Row>
           </Col>
 
           <Col xs={2}> {/* Col 3 - Modifiers */}
             <Row>
-              <span className='text-nowrap'>
+              <span className='text-nowrap float-right'>
               ({character.stats.vitals.wisdomModifier < 0 ? 
                 <> - {Math.abs(character.stats.vitals.wisdomModifier)} </> :
                 character.stats.vitals.wisdomModifier > 0 ?
@@ -385,39 +419,57 @@ const CharacterScreen = () => {
 
           <Col xs={1}> {/* Col 4 - Saving Throws */}
             <Row>
-              <span>{character.stats.savingThrows.wisdomST}</span>
+              <span className='text-nowrap float-right'>{character.stats.savingThrows.wisdomST}</span>
             </Row>
           </Col>
 
-          <Col xs={4}> {/* Col 5 - Skills (wisdom - animal handling, insight, medicine, perception, survival) */}
+          <Col xs={3}> {/* Col 5 - Skills (wisdom - animal handling, insight, medicine, perception, survival) */}
             <Row>
               <Col>
                 <Row>
-                  <span><i className='fa-solid fa-crow'></i>&nbsp;&nbsp; 
+                <span className='text-nowrap'><i className='fa-solid fa-crow'></i>&nbsp;&nbsp; 
                   <span className='d-none d-xl-inline-block'>Animal Handling:</span>
-                  &nbsp;&nbsp;{character.stats.skills.animalHandling}</span>
+                  </span>
                 </Row>
                 <Row>
-                  <span><i className='fa-regular fa-lightbulb'></i>&nbsp;&nbsp; 
+                <span className='text-nowrap'><i className='fa-regular fa-lightbulb'></i>&nbsp;&nbsp; 
                   <span className='d-none d-xl-inline-block'>Insight:</span>
-                  &nbsp;&nbsp;{character.stats.skills.insight}</span>
+                  </span>
                 </Row>
                 <Row>
-                  <span><i className='fa-solid fa-prescription'></i>&nbsp;&nbsp; 
+                <span className='text-nowrap'><i className='fa-solid fa-prescription'></i>&nbsp;&nbsp; 
                   <span className='d-none d-xl-inline-block'>Medicine:</span>
-                  &nbsp;&nbsp;{character.stats.skills.medicine}</span>
+                  </span>
                 </Row>
                 <Row>
-                  <span><i className='fa-solid fa-binoculars'></i>&nbsp;&nbsp; 
+                <span className='text-nowrap'><i className='fa-solid fa-binoculars'></i>&nbsp;&nbsp; 
                   <span className='d-none d-xl-inline-block'>Perception:</span>
-                  &nbsp;&nbsp;{character.stats.skills.perception}</span>
+                  </span>
                 </Row>
                 <Row>
-                  <span><i className='fa-solid fa-campground'></i>&nbsp;&nbsp; 
+                <span className='text-nowrap'><i className='fa-solid fa-campground'></i>&nbsp;&nbsp; 
                   <span className='d-none d-xl-inline-block'>Survival:</span>
-                  &nbsp;&nbsp;{character.stats.skills.survival}</span>
+                  </span>
                 </Row>
               </Col>
+            </Row>
+          </Col>
+
+          <Col xs={1}>
+            <Row>
+              <span className='text-nowrap'>{character.stats.skills.animalHandling}</span>
+            </Row>
+            <Row>
+              <span className='text-nowrap'>{character.stats.skills.insight}</span>
+            </Row>
+            <Row>
+              <span className='text-nowrap'>{character.stats.skills.medicine}</span>
+            </Row>
+            <Row>
+              <span className='text-nowrap'>{character.stats.skills.perception}</span>
+            </Row>
+            <Row>
+              <span className='text-nowrap'>{character.stats.skills.survival}</span>
             </Row>
           </Col>
 
@@ -438,55 +490,71 @@ const CharacterScreen = () => {
 
           <Col xs={1}> {/* Col 2 - Stats */}
             <Row>
-              <span className='text-nowrap'>{character.stats.vitals.charisma}</span>
+              <span className='text-nowrap float-right'>{character.stats.vitals.charisma}</span>
             </Row>
           </Col>
 
           <Col xs={2}> {/* Col 3 - Modifiers */}
             <Row>
-              <span className='text-nowrap'>
+              <span className='text-nowrap float-right'>
               ({character.stats.vitals.charismaModifier < 0 ? 
                 <> - {Math.abs(character.stats.vitals.charismaModifier)} </> :
                 character.stats.vitals.charismaModifier > 0 ?
                 <> + {character.stats.vitals.charismaModifier} </> :
-                <> -- </>})
+                <> + 0 </>})
               </span>
             </Row>
           </Col>
 
           <Col xs={1}> {/* Col 4 - Saving Throws */}
             <Row>
-              <span>{character.stats.savingThrows.charismaST}</span>
+            <span className='text-nowrap float-right'>{character.stats.savingThrows.charismaST}</span>
             </Row>
           </Col>
 
-          <Col xs={4}> {/* Col 5 - Skills (charisma - deception, intimidation, performance, persuasion) */}
+          <Col xs={3}> {/* Col 5 - Skills (charisma - deception, intimidation, performance, persuasion) */}
             <Row>
               <Col>
                 <Row>
-                  <span><i className='fa-solid fa-mask'></i>&nbsp;&nbsp; 
+                <span className='text-nowrap'><i className='fa-solid fa-mask'></i>&nbsp;&nbsp; 
                   <span className='d-none d-xl-inline-block'>Deception:</span>
-                  &nbsp;&nbsp;{character.stats.skills.deception}</span>
+                </span>
                 </Row>
                 <Row>
-                  <span><i className='fa-solid fa-gun'></i>&nbsp;&nbsp; 
+                <span className='text-nowrap'><i className='fa-solid fa-gun'></i>&nbsp;&nbsp; 
                   <span className='d-none d-xl-inline-block'>Intimidation:</span>
-                  &nbsp;&nbsp;{character.stats.skills.intimidation}</span>
+                  </span>
                 </Row>
                 <Row>
-                  <span><i className='fa-solid fa-masks-theater'></i>&nbsp;&nbsp; 
+                <span className='text-nowrap'><i className='fa-solid fa-masks-theater'></i>&nbsp;&nbsp; 
                   <span className='d-none d-xl-inline-block'>Performance:</span>
-                  &nbsp;&nbsp;{character.stats.skills.performance}</span>
+                  </span>
                 </Row>
                 <Row>
-                  <span><i className='fa-solid fa-comments'></i>&nbsp;&nbsp; 
+                <span className='text-nowrap'><i className='fa-solid fa-comments'></i>&nbsp;&nbsp; 
                   <span className='d-none d-xl-inline-block'>Persuasion:</span>
-                  &nbsp;&nbsp;{character.stats.skills.persuasion}</span>
+                  </span>
                 </Row>
                 <br></br>
               </Col>
             </Row>
           </Col>
+
+          <Col xs={1}>
+            <Row>
+              <span className='text-nowrap float-right'>{character.stats.skills.deception}</span>
+            </Row>
+            <Row>
+              <span className='text-nowrap float-right'>{character.stats.skills.intimidation}</span>
+            </Row>
+            <Row>
+              <span className='text-nowrap float-right'>{character.stats.skills.performance}</span>
+            </Row>
+            <Row>
+              <span className='text-nowrap float-right'>{character.stats.skills.persuasion}</span>
+            </Row>
+          </Col>
+
         </Row> {/* End Row 7 - charisma */}
       </Col>
     </Card>

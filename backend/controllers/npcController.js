@@ -21,4 +21,4 @@ const getNPCById = asyncHandler(async (req, res) => {
   }
 })
 
-export {getNPCs, getNPCById}
+export default {getNPCs, getNPCById}

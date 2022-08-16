@@ -35,8 +35,8 @@ import { Link }  from 'react-router-dom'
 - information is rendered differently depending on if that information is present in the json data
 ```js
 <p>
-   {npc.relationships.status !== false
-      ? <> {npc.relationships.type} {npc.relationships.relationship} </>
+   {npc.relationships.status !== false ? 
+      <> {npc.relationships.type} {npc.relationships.relationship} </>
       : <> - </>
    }
 </p>

@@ -4,19 +4,19 @@
 
 
 ## The Cast
-![thecast](https://user-images.githubusercontent.com/47723396/184944208-5b5ba222-2c49-433e-9c02-92d41e357d91.JPG)
 - lists player characters
-- clicking on a character's name or image navigates to that character's details page
+- clicking on a character's name or image navigates to that character's details page   
+![thecast](https://user-images.githubusercontent.com/47723396/184944208-5b5ba222-2c49-433e-9c02-92d41e357d91.JPG)
 
 ## The Crew
-![thecrew](https://user-images.githubusercontent.com/47723396/184944022-c35ae0d7-50ac-4fe2-853c-113d66fd3614.JPG)
 - lists npcs (non-player characters)
-- can navigate between 'The Cast' and 'The Crew' pages using the navigation bar
+- can navigate between 'The Cast' and 'The Crew' pages using the navigation bar   
+![thecrew](https://user-images.githubusercontent.com/47723396/184944022-c35ae0d7-50ac-4fe2-853c-113d66fd3614.JPG)
 
 ## Character Details
-![mindyfull](https://user-images.githubusercontent.com/47723396/184939321-8c0f8c33-65dd-4da1-8030-84b7e2044567.JPG)
 - displays character info and stats
-- information is rendered depending on if it is included in the json or not
+- information is rendered depending on if it is included in the json or not   
+![mindyfull](https://user-images.githubusercontent.com/47723396/184939321-8c0f8c33-65dd-4da1-8030-84b7e2044567.JPG)
 
 ## Responsive Design
 - website layout responds to screen size

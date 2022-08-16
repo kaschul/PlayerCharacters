@@ -102,3 +102,19 @@ import { LinkContainer } from 'react-router-bootstrap'
 ## Footer
 ![footer](https://user-images.githubusercontent.com/47723396/184943358-eee4608b-3183-4d8f-9260-3d376dbb2ef6.JPG)
 - footer at the bottom of every page displays copyright info and credits
+```js
+<Router>
+   <Header />
+   <main className='py-3'>
+      <Container>
+         <Routes>
+            <Route path='/' element={<HomeScreen />} exact />
+            <Route path='/character/:id' element={<CharacterScreen />} />
+            <Route path='/npcs' element={<NpcListScreen />} />
+            <Route path='/npc/:id' element={<NpcCharacterScreen />} />
+         </Routes>
+      </Container>
+   </main>
+   <Footer />
+</Router>
+```

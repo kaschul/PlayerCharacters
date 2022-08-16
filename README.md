@@ -9,10 +9,8 @@
 - bootstrap used for web design
 - maps json data to create character list display
 ```js
-// imports json data
-import characters from '../characters'
-// imports character component used to display character info
-import Character from '../components/Character'
+import characters from '../characters'            // imports json data
+import Character from '../components/Character'   // imports character component
 // ... (code omitted for example) ...
 // maps each character's data from the imported json to the imported character component
 // creates the list of characters to display

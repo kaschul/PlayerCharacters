@@ -46,6 +46,10 @@ import { Link }  from 'react-router-dom'
 - displays character info and stats
 ![mindyfull](https://user-images.githubusercontent.com/47723396/184939321-8c0f8c33-65dd-4da1-8030-84b7e2044567.JPG)
 - information is rendered differently depending on if that information is present in the json data
+```js
+// character subclass only displayed if not null
+<span>Lvl {character.level} {character.class} {character.subclass != null && <>- {character.subclass}</>}</span>
+```
 
 ## Navbar
 - can navigate between 'The Cast' and 'The Crew' pages using the navigation bar in the header

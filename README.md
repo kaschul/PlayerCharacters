@@ -41,8 +41,30 @@ import { Link }  from 'react-router-dom'
    }
 </p>
 ```
-- can navigate between 'The Cast' and 'The Crew' pages using the navigation bar   
-
+- can navigate between 'The Cast' and 'The Crew' pages using the navigation bar in the header
+```js
+import { Container, Navbar, Nav } from 'react-bootstrap'
+import { LinkContainer } from 'react-router-bootstrap'
+// ... (code omitted for example) ...
+<Navbar bg="dark" variant="dark" expand="lg" collapseOnSelect>
+   <Container>
+      <LinkContainer to="/">
+         <Navbar.Brand>The Character List</Navbar.Brand>
+      </LinkContainer>
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Collapse id="basic-navbar-nav">
+         <Nav className="ms-auto">
+            <LinkContainer to="/">
+               <Nav.Link>Player Characters</Nav.Link>
+            </LinkContainer>
+            <LinkContainer to="/npcs">
+               <Nav.Link>NPCs</Nav.Link>
+            </LinkContainer>
+         </Nav>
+      </Navbar.Collapse>
+   </Container>
+</Navbar>
+```
 ## Character Details
 - displays character info and stats
 ![mindyfull](https://user-images.githubusercontent.com/47723396/184939321-8c0f8c33-65dd-4da1-8030-84b7e2044567.JPG)

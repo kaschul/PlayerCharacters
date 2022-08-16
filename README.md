@@ -89,6 +89,12 @@ import { LinkContainer } from 'react-router-bootstrap'
   * collapsed navbar, displays 1 across   
 ![navbar3](https://user-images.githubusercontent.com/47723396/184942077-cc3dabb1-0116-43a7-9e89-89e3028c94c1.JPG)   
 - depending on screen size, skills are reduced from *icon and title* to *icon only*
+```js
+<strong className='text-nowrap'>
+   <i className='fa-solid fa-weight-hanging'></i>                 // (Font Awesome icon)
+   <span className='d-none d-xl-inline-block'>STRENGTH:</span>    // displays only on xl (bootstrap)
+</strong>
+```
 ![mindy3](https://user-images.githubusercontent.com/47723396/184939889-9d7f00bd-2dcf-4dbf-b22f-17a7e16eb543.JPG)
 - when narrow, side-by-side display for character details is replaced by vertical display
 ![mindy4](https://user-images.githubusercontent.com/47723396/184939899-46098359-f627-44f4-8bf2-87ab80fff50c.JPG)

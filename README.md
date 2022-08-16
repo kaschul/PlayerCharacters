@@ -104,7 +104,7 @@ import { LinkContainer } from 'react-router-bootstrap'
 - footer at the bottom of every page displays copyright info and credits
 ```js
 <Router>
-   <Header />     // header contains navbar
+   <Header />  // header contains navbar
    <main className='py-3'>
       <Container>
          <Routes>
@@ -115,6 +115,6 @@ import { LinkContainer } from 'react-router-bootstrap'
          </Routes>
       </Container>
    </main>
-   <Footer />     // footer contains copyright
+   <Footer />  // footer contains copyright
 </Router>
 ```

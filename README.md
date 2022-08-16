@@ -23,6 +23,8 @@
 - when window narrows, navbar collapses and is toggled by icon   
   * full navbar, displays 4 across   
 ![navbar1](https://user-images.githubusercontent.com/47723396/184942060-f50f7025-86ee-4983-adf1-2c8dea64e044.JPG)   
+  * full navbar, displays 3 across   
+![navbar4](https://user-images.githubusercontent.com/47723396/184943632-a9ff4aac-ddfd-4c40-ac3c-69eba9f732b3.JPG)   
   * collapsed navbar, displays 2 across   
 ![navbar2](https://user-images.githubusercontent.com/47723396/184942067-271498e1-7061-4f0b-987c-d55e43a75356.JPG)   
   * collapsed navbar, displays 1 across   

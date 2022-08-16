@@ -1,6 +1,6 @@
 # PlayerCharacters
 
-**code under rewrite for new Redux update**
+**code currently under re-write for new Redux update**
 
 
 ## The Cast

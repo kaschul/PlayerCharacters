@@ -4,12 +4,13 @@
 
 
 ## The Cast
-![dndc1](https://user-images.githubusercontent.com/47723396/184938507-95775f4e-aa35-41db-be57-12946aac3720.JPG)
+![thecast](https://user-images.githubusercontent.com/47723396/184944005-453537e8-fe5b-4306-8e66-be70de91a569.JPG)
+
 - lists player characters
 - clicking on a character's name or image navigates to that character's details page
 
 ## The Crew
-![dndc2](https://user-images.githubusercontent.com/47723396/184938881-2c3aaef7-1f86-4783-baaf-de0ecf208003.JPG)
+![thecrew](https://user-images.githubusercontent.com/47723396/184944022-c35ae0d7-50ac-4fe2-853c-113d66fd3614.JPG)
 - lists npcs (non-player characters)
 - can navigate between 'The Cast' and 'The Crew' pages using the navigation bar
 

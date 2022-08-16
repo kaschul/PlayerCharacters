@@ -10,13 +10,13 @@
 
 ## The Crew
 - lists npcs (non-player characters)
-- information is rendered differently depending on if it is included in the json 
+- information is rendered differently depending on its inclusion in the json data
 - can navigate between 'The Cast' and 'The Crew' pages using the navigation bar   
 ![thecrew](https://user-images.githubusercontent.com/47723396/184944022-c35ae0d7-50ac-4fe2-853c-113d66fd3614.JPG)
 
 ## Character Details
 - displays character info and stats
-- information is rendered differently depending on if it is included in the json 
+- information is rendered differently depending on its inclusion in the json data
 ![mindyfull](https://user-images.githubusercontent.com/47723396/184939321-8c0f8c33-65dd-4da1-8030-84b7e2044567.JPG)
 
 ## Responsive Design

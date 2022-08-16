@@ -20,9 +20,12 @@
 
 ## Responsive Design
 - website layout responds to screen size
-- when narrow, navbar collapses and is toggled by icon
+### when window narrows, navbar collapses and is toggled by icon
+- full navbar, displays 4 across
 ![navbar1](https://user-images.githubusercontent.com/47723396/184942060-f50f7025-86ee-4983-adf1-2c8dea64e044.JPG)
+- collapsed navbar, displays 2 across
 ![navbar2](https://user-images.githubusercontent.com/47723396/184942067-271498e1-7061-4f0b-987c-d55e43a75356.JPG)
+- collapsed navbar, displays 1 across
 ![navbar3](https://user-images.githubusercontent.com/47723396/184942077-cc3dabb1-0116-43a7-9e89-89e3028c94c1.JPG)
 
 

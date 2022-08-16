@@ -6,8 +6,12 @@
 ## The Cast
 - lists player characters
 ![thecast](https://user-images.githubusercontent.com/47723396/184944208-5b5ba222-2c49-433e-9c02-92d41e357d91.JPG)
+- bootstrap used for web design
 - maps json data to create character list display
 ```js
+import characters from '../characters'             // imports json data
+import Character from '../components/Character'    // imports character component used to display character info
+// ... (code omitted for example) ...
 {characters.map((character) => (
    <Col sm={12} md={6} lg={4} xl={3}>
       <Character character={character} />

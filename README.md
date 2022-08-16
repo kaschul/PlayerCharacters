@@ -41,6 +41,13 @@ import { Link }  from 'react-router-dom'
    }
 </p>
 ```
+
+## Character Details
+- displays character info and stats
+![mindyfull](https://user-images.githubusercontent.com/47723396/184939321-8c0f8c33-65dd-4da1-8030-84b7e2044567.JPG)
+- information is rendered differently depending on if that information is present in the json data
+
+## Navbar
 - can navigate between 'The Cast' and 'The Crew' pages using the navigation bar in the header
 ```js
 import { Container, Navbar, Nav } from 'react-bootstrap'
@@ -65,10 +72,6 @@ import { LinkContainer } from 'react-router-bootstrap'
    </Container>
 </Navbar>
 ```
-## Character Details
-- displays character info and stats
-![mindyfull](https://user-images.githubusercontent.com/47723396/184939321-8c0f8c33-65dd-4da1-8030-84b7e2044567.JPG)
-- information is rendered differently depending on if that information is present in the json data
 
 ## Responsive Design
 - website layout responds to screen size

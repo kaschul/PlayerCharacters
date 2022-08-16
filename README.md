@@ -32,9 +32,6 @@
 ![navbar2](https://user-images.githubusercontent.com/47723396/184942067-271498e1-7061-4f0b-987c-d55e43a75356.JPG)   
   * collapsed navbar, displays 1 across   
 ![navbar3](https://user-images.githubusercontent.com/47723396/184942077-cc3dabb1-0116-43a7-9e89-89e3028c94c1.JPG)   
-
-
-
 - depending on screen size, skills are reduced from *icon and title* to *icon only*
 ![mindy3](https://user-images.githubusercontent.com/47723396/184939889-9d7f00bd-2dcf-4dbf-b22f-17a7e16eb543.JPG)
 - when narrow, side-by-side display for character details is replaced by vertical display

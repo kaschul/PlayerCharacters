@@ -36,5 +36,5 @@
 ![mindy4](https://user-images.githubusercontent.com/47723396/184939899-46098359-f627-44f4-8bf2-87ab80fff50c.JPG)
 
 ## Footer
-![thecastlist](https://user-images.githubusercontent.com/47723396/184940611-f12c079b-65d3-4534-ab3d-f28312790c67.JPG)
+![footer](https://user-images.githubusercontent.com/47723396/184943358-eee4608b-3183-4d8f-9260-3d376dbb2ef6.JPG)
 - footer at the bottom of every page displays copyright info and credits

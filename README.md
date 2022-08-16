@@ -5,9 +5,16 @@
 
 ## The Cast
 - lists player characters
-- maps json data to create character list display
-- clicking on a character's name or image navigates to that character's details page   
 ![thecast](https://user-images.githubusercontent.com/47723396/184944208-5b5ba222-2c49-433e-9c02-92d41e357d91.JPG)
+- maps json data to create character list display
+```js
+{characters.map((character) => (
+   <Col sm={12} md={6} lg={4} xl={3}>
+      <Character character={character} />
+   </Col>
+))}
+```
+- clicking on a character's name or image navigates to that character's details page   
 
 ## The Crew
 - lists npcs (non-player characters)

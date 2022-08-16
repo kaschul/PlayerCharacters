@@ -19,7 +19,14 @@ import Character from '../components/Character'    // imports character componen
    </Col>
 ))}
 ```
-- clicking on a character's name or image navigates to that character's details page   
+- clicking on a character's name or image navigates to that character's details page
+```js
+import { Link }  from 'react-router-dom'
+// ... (code omitted for example) ...
+<Link to={`/character/${character._id}`}>
+   <Card.Img src={character.image} variant='top' />
+</Link>
+```
 
 ## The Crew
 - lists npcs (non-player characters)

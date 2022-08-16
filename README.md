@@ -4,8 +4,7 @@
 
 
 ## The Cast
-![thecast](https://user-images.githubusercontent.com/47723396/184944005-453537e8-fe5b-4306-8e66-be70de91a569.JPG)
-
+![thecast](https://user-images.githubusercontent.com/47723396/184944208-5b5ba222-2c49-433e-9c02-92d41e357d91.JPG)
 - lists player characters
 - clicking on a character's name or image navigates to that character's details page
 

@@ -1,8 +1,5 @@
 # PlayerCharacters
 
-**_code currently under rewrite for new Redux update and database migration_**   
-(this branch contains working frontend code for display purposes)
-
 
 ## The Cast
 - lists player characters

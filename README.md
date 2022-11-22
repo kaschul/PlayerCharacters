@@ -47,7 +47,11 @@ import { Link }  from 'react-router-dom'
 - information is rendered differently depending on if that information is present in the json data
 ```js
 // character subclass only displayed if not null
-<span>Lvl {character.level} {character.class} {character.subclass != null && <>- {character.subclass}</>}</span>
+<span>
+   Lvl {character.level} 
+   {character.class} 
+   {character.subclass != null && <>- {character.subclass}</>}
+</span>
 ```
 
 ## Navbar
